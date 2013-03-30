@@ -9,6 +9,8 @@ gem 'mysql2'
 gem 'haml'
 gem 'haml-rails'
 gem 'sass'
+gem 'bootstrap-sass'
+gem 'simple_form'
 
 gem 'json'
 
