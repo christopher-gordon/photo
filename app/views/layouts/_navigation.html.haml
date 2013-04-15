@@ -1,1 +1,17 @@
-= link_to "Home", root_path
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+      %a.brand{:href => "#"} Chris Gordon Photography
+      .nav-collapse.collapse
+        %ul.nav
+          %li
+            %a{:href => "#"} Home
+          %li
+            %a{:href => "#gallery"} Photo Gallery
+          %li
+            %a{:href => "#about"} Pricing and Framing
+          %li
+            %a{:href => "#about"} About the Artist
+          %li
+            %a{:href => "#contact"} Contact Information
