@@ -2,16 +2,16 @@
   .navbar-inner
     .container-fluid
       %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
-      %a.brand{:href => "#"} Chris Gordon Photography
+      %a.brand{:href => root_path} Chris Gordon Photography
       .nav
         %ul.nav
           %li
-            %a{:href => "#"} Home
+            %a{:href => root_path} Home
           %li
-            %a{:href => "#gallery"} Photo Gallery
+            %a{:href => gallery_index_path} Photo Gallery
           %li
-            %a{:href => "#about"} Pricing and Framing
+            %a{:href => pricing_path} Pricing and Framing
           %li
-            %a{:href => "#about"} About the Artist
+            %a{:href => about_path} About the Artist
           %li
-            %a{:href => "#contact"} Contact Information
+            %a{:href => contact_path} Contact Information

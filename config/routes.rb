@@ -3,6 +3,10 @@ Photo::Application.routes.draw do
 
   resources :gallery, :only => [:index]
 
+  match "/about" => "home#about"
+  match "/pricing" => "home#pricing"
+  match "/contact" => "home#contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
