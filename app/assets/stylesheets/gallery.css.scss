@@ -1,14 +1,23 @@
-//.container {
-//  margin-left: 50px;
-//  margin-right: 50px;
-//}
+.container {
+  //  margin-left: 50px;
+  //  margin-right: 50px;
+}
 
 .row-fluid {
   width: 15px;
 }
 
 .sidebar-nav {
-  margin-left: -175px;
+  float: left;
+  //display: inline-block;
+  margin-left: 0;
+  margin-right: auto;
   background: none;
   border: none;
+  width: 15px;
+}
+
+.nav-list {
+  width: 15px;
+  margin: 5px;
 }
