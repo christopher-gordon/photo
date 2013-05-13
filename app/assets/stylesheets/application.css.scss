@@ -17,6 +17,10 @@
   margin-right: 50px;
 }
 
+.container.footer {
+  width: 100%;
+}
+
 
 .content {
   background-color: #eee;
@@ -33,4 +37,8 @@
 .center {
   text-align: center;
   margin: 30px;
+}
+
+.navbar-inner {
+  height: 40px;
 }

@@ -1,6 +1,7 @@
 .container {
   //  margin-left: 50px;
   //  margin-right: 50px;
+  width: 50%;
 }
 
 .row-fluid {
@@ -14,10 +15,11 @@
   margin-right: auto;
   background: none;
   border: none;
-  width: 15px;
+  width: 20%;
 }
 
 .nav-list {
-  width: 15px;
-  margin: 5px;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
 }
