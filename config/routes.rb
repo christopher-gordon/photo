@@ -2,6 +2,7 @@ Photo::Application.routes.draw do
   get "home/index"
 
   resources :gallery, :only => [:index]
+  resources :admin, :only => [:index]
 
   match "/about" => "home#about"
   match "/pricing" => "home#pricing"
