@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20130519032245) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "album_id"
+    t.boolean  "slideshow"
   end
 
   create_table "users", :force => true do |t|
