@@ -8,6 +8,8 @@ Photo::Application.routes.draw do
   match "/pricing" => "home#pricing"
   match "/contact" => "home#contact"
 
+  match "/admin/upload" => "admin#upload"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

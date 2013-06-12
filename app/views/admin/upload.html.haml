@@ -1,0 +1,6 @@
+= simple_form_for :picture, :url => {:action => :create} do |f|
+  = f.input :photo_file, :as => 'file'
+  = f.input :title
+  = f.input :description
+  = #f.input :slideshow, :as => check_box, input_html: {checked: false}
+  = f.submit 'Add picture'
