@@ -3,6 +3,6 @@ class Picture < ActiveRecord::Base
 
   has_one :album
 
-  validates :description, :content_type, :location, :prescence => true
+  validates_presence_of :title, :description, :location
   validates :filename, :uniqueness => true
 end
