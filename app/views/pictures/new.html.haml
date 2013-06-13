@@ -3,6 +3,9 @@
   =# file_field_tag :photo_file
   = f.file_field :photo_file
 
+  = label_tag :upload_thumbnail, "Upload the matching thumbnail"
+  = f.file_field :thumbnail_file
+
   = label_tag :title, "Title"
   =# text_area_tag :title
   = f.text_area :title
