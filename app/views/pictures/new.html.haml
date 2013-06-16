@@ -1,24 +1,21 @@
+=#TODO - allow adding of picture to an album
+
 = form_for @picture, :url => pictures_path do |f|
   = label_tag :upload_photo, "Choose photo to upload"
-  =# file_field_tag :photo_file
   = f.file_field :photo_file
 
-  = label_tag :upload_thumbnail, "Upload the matching thumbnail"
-  = f.file_field :thumbnail_file
+  =# label_tag :upload_thumbnail, "Upload the matching thumbnail"
+  =# f.file_field :thumbnail_file
 
   = label_tag :title, "Title"
-  =# text_area_tag :title
   = f.text_area :title
 
   = label_tag :description, "Description"
-  =# text_area_tag :description
   = f.text_area :description
 
   = label_tag :location, "Location"
   = f.text_area :location
 
-  =# check_box_tag :slideshow, :input_html => {checked: false}
   = f.check_box :slideshow
 
   = submit_tag 'Add picture'
-
