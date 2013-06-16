@@ -39,7 +39,6 @@ class Picture < ActiveRecord::Base
   end
 
   def self.upload(image)
-    puts "in upload"
     File.open(Rails.root.join('app', 'assets', 'images', image.original_filename), 'wb') do |file|
       file.write(image.read)
     end
