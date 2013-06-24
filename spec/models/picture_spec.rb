@@ -30,13 +30,6 @@ describe Picture do
                 :content_type => 'type').should_not be_valid
   end
 
-  it 'requires a location' do
-    Picture.new(:title => 'valid title',
-                :description => 'valid desc',
-                :filename => 'filename',
-                :content_type => 'type').should_not be_valid
-  end
-
   it 'requires a content_type' do
     Picture.new(:title => 'valid title',
                 :description => 'valid desc',
