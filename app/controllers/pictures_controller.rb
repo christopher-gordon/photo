@@ -16,7 +16,7 @@ class PicturesController < ApplicationController
 
     if Picture.create(picture_params)
       flash[:notice] = "You have added this picture!"
-      redirect_to gallery_index_url #TODO: redirect to show page for newly added photo
+      redirect_to "/pictures/#{Picture.last.id}" #TODO: redirect to show page for newly added photo
     else
       flash[:error] = "There was an error adding this picture!"
       redirect_to gallery_index_url #TODO: redirect to pictures new page?
