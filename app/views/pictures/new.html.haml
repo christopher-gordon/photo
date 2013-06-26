@@ -15,6 +15,8 @@
 
   =# label_tag :location, "Location"
   =# f.text_area :location
+  = label_tag :album_select, "Select an album"
+  = f.select :album, options_for_select(Album.all.map(&:name)), :prompt => ' '
 
   = f.check_box :slideshow
 

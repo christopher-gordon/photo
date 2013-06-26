@@ -3,6 +3,7 @@ class Picture < ActiveRecord::Base
   attr_accessible :description, :title, :filename, :content_type, :slideshow
 
   #has_one :album #TODO albums
+  belongs_to :album
 
   validates_presence_of :title, :description, :filename, :content_type
   validates :filename, :uniqueness => true
