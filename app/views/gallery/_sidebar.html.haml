@@ -1,6 +1,6 @@
 .well.sidebar-nav
   %ul.nav.nav-list
     %li.nav-title Albums
-    - @albums.each do |album|
-      %li.nav-header
-        = album.name
+    -@albums.each do |album|
+      %li.nav-header{:class => ("active" if params[:album] == album.name)}
+        =link_to "#{album.name}", gallery_index_url(:album => album.name)
