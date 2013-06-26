@@ -1,11 +1,10 @@
 class Picture < ActiveRecord::Base
   #TODO - migration - remove thumbnail
-  attr_accessible :description, :title, :filename, :content_type, :slideshow
-
-  #has_one :album #TODO albums
   belongs_to :album
 
-  validates_presence_of :title, :description, :filename, :content_type
+  attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id
+
+  validates_presence_of :title, :description, :filename, :content_type, :album_id
   validates :filename, :uniqueness => true
 
   protected
@@ -25,6 +24,7 @@ class Picture < ActiveRecord::Base
     picture.content_type = params[:photo_file].content_type
     picture.filename = params[:photo_file].original_filename
     picture.slideshow = (params[:slideshow] == 0 ? false : true)
+    picture.album_id = Album.find_by_name(params[:album]).id
 
     upload(params[:photo_file])
 
