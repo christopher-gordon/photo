@@ -140,7 +140,7 @@ DEPENDENCIES
   jquery-rails
   json
   mysql2
-  pg (= 0.12.2)
+  pg
   rails (= 3.2.1)
   rspec-rails (~> 2.0)
   sass
