@@ -4,5 +4,10 @@
     .content.gallery
       %h1 Photo Gallery
       =#TODO  display @pictures collection as thumbnails
-      - @pictures.each do |picture|
-        = image_tag picture.filename
+      %table
+        - @pictures.in_groups_of(2) do |picture_group|
+          %tr.photo-row
+            %td.photo
+              = image_tag picture_group.first.filename if picture_group.first
+            %td.photo
+              = image_tag picture_group.last.filename if picture_group.last
