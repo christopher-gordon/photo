@@ -1,4 +1,8 @@
-= render 'gallery/sidebar'
-.container
-  .content
-    %h1 Photo Gallery
+.container-group
+  = render 'gallery/sidebar'
+  .container
+    .content.gallery
+      %h1 Photo Gallery
+      =#TODO  display @pictures collection as thumbnails
+      - @pictures.each do |picture|
+        = image_tag picture.filename
