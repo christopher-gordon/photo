@@ -3,7 +3,10 @@
   .container
     .content.gallery
       %h1.center
-        = title_text(@album)
+        = @album.nil? ? "Gallery" : @album.name
+      - if @album.nil?
+        %h4.center
+          Please select an album on the left
       =#TODO  display @pictures collection as thumbnails
       - if @album
         %table

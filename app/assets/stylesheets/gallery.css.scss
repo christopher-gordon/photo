@@ -25,7 +25,7 @@
   //display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  background: none;
+  background-color: #FEFDFE;
   border: none;
   width: 132px;
   padding-left: 0px;
@@ -33,7 +33,7 @@
 }
 
 .nav-list {
-  width: 100px;
+  width: 107px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -47,3 +47,10 @@
   width: 45%;
   padding: 10px;
 }}
+
+.active.nav-header {
+  background-color: #F0F0F0;
+  a {
+    background-color: grey;
+  }
+}

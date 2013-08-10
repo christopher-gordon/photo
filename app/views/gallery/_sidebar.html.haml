@@ -3,6 +3,7 @@
     %li.nav-title
       %h4
         Albums
+    =#TODO only display album if there are pictures in it
     -@albums.each do |album|
       %li.nav-header{:class => ("active" if params[:album] == album.name)}
         =link_to "#{album.name}", gallery_index_url(:album => album.name)
