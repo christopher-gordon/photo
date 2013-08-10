@@ -2,12 +2,13 @@
   = render 'gallery/sidebar'
   .container
     .content.gallery
-      %h1 Photo Gallery
+      %h1.center
+        = title_text(@album)
       =#TODO  display @pictures collection as thumbnails
-      %table
-        - @pictures.in_groups_of(2) do |picture_group|
-          %tr.photo-row
-            %td.photo
-              = image_tag picture_group.first.filename if picture_group.first
-            %td.photo
-              = image_tag picture_group.last.filename if picture_group.last
+      - if @album
+        %table
+          - @pictures.in_groups_of(2) do |picture_group|
+            %tr.photo-row
+              - picture_group.each do |picture|
+                %td.photo
+                  = image_tag picture.filename if picture
