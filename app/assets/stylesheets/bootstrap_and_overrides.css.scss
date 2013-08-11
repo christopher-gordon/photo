@@ -2,5 +2,21 @@
 body { 
   padding-top: 60px;
   background-color: #D0D0D0;
+  font-size: 13px;
 }
+
+.navbar{
+  .brand {
+    font-size: 18px;
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.navbar .divider-vertical {
+  background-color: grey;
+}
+
 @import "bootstrap-responsive";

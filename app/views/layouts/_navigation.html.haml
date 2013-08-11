@@ -2,16 +2,17 @@
   .navbar-inner
     .container-fluid
       %a.brand{:href => root_path} Chris Gordon Photography
-      .nav
-        %li.divider-vertical
-        %ul.nav
-          %li
-            %a{:href => root_path} Home
-          %li
-            %a{:href => gallery_index_path} Gallery
-          %li
-            %a{:href => pricing_path} Pricing
-          %li
-            %a{:href => about_path} About
-          %li
-            %a{:href => contact_path} Contact
+      %ul.nav
+        %li
+          %a{:href => gallery_index_path} Gallery
+        %li
+          %a{:href => pricing_path} Pricing
+        %li
+          %a{:href => about_path} About
+        %li
+          %a{:href => contact_path} Contact
+      %ul.nav.pull-right
+        %li.smaller
+          %a{:href => contact_path} cgordonphoto@gmail.com
+        %li.smaller
+          %a{:href => contact_path} (312) 527-1036
