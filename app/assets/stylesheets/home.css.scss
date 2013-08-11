@@ -33,4 +33,11 @@
 
 .content.pricing {
   background-color: lightsteelblue;
+  .under {
+    text-decoration: underline;
+  }
+}
+
+.ridge {
+  border: ridge;
 }
