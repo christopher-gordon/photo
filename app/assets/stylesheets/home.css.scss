@@ -2,6 +2,10 @@
 //  margin-left: 150px;
 //}
 
+.content {
+  border: ridge;
+}
+
 .photo {
   width: 90%;
   margin-left: auto;
@@ -21,4 +25,12 @@
 
 .content.home {
   width: 100%;
+}
+
+.content.about {
+  background-color: lightsteelblue;
+}
+
+.content.pricing {
+  background-color: lightsteelblue;
 }

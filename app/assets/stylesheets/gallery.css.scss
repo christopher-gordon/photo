@@ -2,6 +2,11 @@
   //  margin-left: 50px;
   //  margin-right: 50px;
   width: 600px;
+  text-color: darkslategrey;
+}
+
+.well.sidebar-nav {
+  border: ridge;
 }
 
 .container-group {
@@ -14,6 +19,13 @@
   margin-left: 25px;
   margin-right:auto;
   width: 650px;
+  .main {
+    background-color: lightsteelblue;
+  }
+}
+
+.content.contact {
+  background-color: lightsteelblue;
 }
 
 .row-fluid {
@@ -26,10 +38,15 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #FEFDFE;
+  //font-color: darkslategrey;
   border: none;
   width: 132px;
   padding-left: 0px;
   padding-right: 5px;
+
+  .nav-title {
+    text-decoration: underline;
+  }
 }
 
 .nav-list {
@@ -49,9 +66,12 @@
 }}
 
 .active.nav-header {
-  background-color: #F0F0F0;
+  background-color: lightsteelblue;
   a {
     background-color: grey;
+  }
+  a > :hover {
+    background-color: lightsteelblue;
   }
 }
 
