@@ -27,12 +27,14 @@
   width: 100%;
 }
 
-.content.about {
-  background-color: lightsteelblue;
+.content {
+  .about {
+    background-color: lightsteelblue;
+  }
 }
 
 .content.pricing {
-  background-color: lightsteelblue;
+  background-color: #FEFDFE;
   .under {
     text-decoration: underline;
   }
@@ -40,4 +42,8 @@
 
 .ridge {
   border: ridge;
+}
+
+.blue {
+  background-color: lightsteelblue;
 }
