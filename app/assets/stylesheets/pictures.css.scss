@@ -1,3 +1,18 @@
-// Place all the styles related to the pictures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.center {
+  width: 600px;
+  margin-left: auto;
+  margin-top: 40px;
+  margin-right: auto;
+}
+
+.bold label {
+  font-weight: bold;
+}
+
+//TODO: this isn't being recognized yet
+.center {
+    label textarea {
+    margin: 100px;
+  }
+}
+
