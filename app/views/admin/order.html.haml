@@ -1,0 +1,20 @@
+.container-group
+  = render 'gallery/sidebar'
+  .container
+    .content.gallery
+      %h1.center
+        = @album.nil? ? "Re-order" : @album.name
+      - if @album.nil?
+        %h4.center
+          Choose an album to re-order pictures
+      =#TODO  display @pictures collection as thumbnails
+      - if @album
+        %table
+          - @pictures.in_groups_of(2) do |picture_group|
+            %tr.photo-row
+              - picture_group.each do |picture|
+                %td.photo
+                  - if picture
+                    = image_tag picture.filename
+                    %br
+                    = picture.ordering
