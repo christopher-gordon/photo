@@ -1,5 +1,13 @@
 .container-group
-  = render 'gallery/sidebar'
+  .well.sidebar-nav
+    %ul.nav.nav-list
+      %li.nav-title
+        %h4
+          Albums
+      -@albums.each do |album|
+        %li.nav-header{:class => ("active" if params[:album] == album.name)}
+          =link_to "#{album.name}", admin_order_url(:album => album.name)
+
   .container
     .content.gallery
       %h1.center
@@ -16,5 +24,8 @@
                 %td.photo
                   - if picture
                     = image_tag picture.filename
-                    %br
-                    = picture.ordering
+            %tr.ordering
+              - picture_group.each do |picture|
+                %td
+                  - if picture
+                    = select_tag(:order, picture.ordering)
