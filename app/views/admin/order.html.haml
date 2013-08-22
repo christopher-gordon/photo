@@ -28,4 +28,4 @@
               - picture_group.each do |picture|
                 %td
                   - if picture
-                    = select_tag(:order, picture.ordering)
+                    = select_tag(:order, options_for_select([picture.ordering]))
