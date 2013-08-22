@@ -10,11 +10,7 @@ class Picture < ActiveRecord::Base
   protected
 
   def self.create(params)
-    puts "params"
-    puts params.inspect
     return false unless valid_params?(params)
-
-    puts "made it here"
 
     picture = Picture.new
 
@@ -24,7 +20,10 @@ class Picture < ActiveRecord::Base
     picture.content_type = params[:photo_file].content_type
     picture.filename = params[:photo_file].original_filename
     picture.slideshow = (params[:slideshow] == 0 ? false : true)
-    picture.album_id = Album.find_by_name(params[:album]).id
+
+    album = Album.find_by_name(params[:album]).id
+    picture.album_id = album.id
+    picture.ordering = generate_ordering album
 
     upload(params[:photo_file])
 
@@ -35,7 +34,6 @@ class Picture < ActiveRecord::Base
 
   def self.valid_params?(params)
     return false if params[:title].nil? || params[:description].nil? || params[:photo_file].nil?
-    #return false if params[:location].nil?
     true
   end
 
@@ -45,4 +43,9 @@ class Picture < ActiveRecord::Base
     end
   end
 
+  #TODO spec test
+  def generate_ordering(album)
+    ordering = album.ordering_list.sort
+    ordering.last + 1
+  end
 end
