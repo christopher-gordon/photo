@@ -4,6 +4,8 @@
     .bold
       = label_tag :upload_photo, "Choose photo to upload:"
     = f.file_field :photo_file
+    %br
+    %br
 
     =# label_tag :upload_thumbnail, "Upload the matching thumbnail"
     =# f.file_field :thumbnail_file
@@ -19,11 +21,13 @@
     =# label_tag :album_label, "Select an album"
     %br
     = f.select :album, options_for_select(Album.all.map(&:name)), :prompt => 'Please select an album'
+    %br
 
     %br
     = label_tag :slideshow_label, "Part of slideshow?"
     = f.check_box :slideshow
 
+    %br
     %br
     %br
     = submit_tag 'Add picture'
