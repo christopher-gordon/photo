@@ -1,8 +1,9 @@
 class Album < ActiveRecord::Base
   has_many :pictures
 
-  #TODO spec test
+  attr_accessible :name
+
   def ordering_list
-    Album.pictures.map(&:ordering)
+    pictures.map(&:ordering)
   end
 end

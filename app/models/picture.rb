@@ -2,10 +2,16 @@ class Picture < ActiveRecord::Base
   #TODO - migration - remove thumbnail
   belongs_to :album
 
-  attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id
+  attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering
 
   validates_presence_of :title, :description, :filename, :content_type, :album_id
   validates :filename, :uniqueness => true
+
+  #TODO: move this to album?
+  def self.generate_ordering(album)
+    ordering = album.ordering_list.sort
+    ordering.last + 1
+  end
 
   protected
 
@@ -41,11 +47,5 @@ class Picture < ActiveRecord::Base
     File.open(Rails.root.join('app', 'assets', 'images', image.original_filename), 'wb') do |file|
       file.write(image.read)
     end
-  end
-
-  #TODO spec test
-  def generate_ordering(album)
-    ordering = album.ordering_list.sort
-    ordering.last + 1
   end
 end
