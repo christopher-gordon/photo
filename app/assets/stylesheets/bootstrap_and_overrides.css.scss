@@ -6,9 +6,16 @@ body {
 }
 
 .navbar{
+  .container-fluid {
+    background-color: aliceblue;
+  }
   .brand {
     font-size: 18px;
   }
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+  color: black;
 }
 
 .pull-right {
