@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/albandiguer/galleria-rails.git
+  revision: 0ce52dbe0dd5730d24c39bbb35a86d796114e1c3
+  specs:
+    galleria-rails (1.2.9)
+      railties (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -135,6 +142,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 3.2.1)
+  galleria-rails!
   haml
   haml-rails
   jquery-rails

@@ -10,9 +10,9 @@
         = render "home/contact"
       =#TODO  display @pictures collection as thumbnails
       - if @album
-        %table
-          - @pictures.in_groups_of(2) do |picture_group|
-            %tr.photo-row
-              - picture_group.each do |picture|
-                %td.photo
-                  = image_tag picture.filename if picture
+        #galleria
+          - @pictures.each do |picture|
+            = image_tag picture.filename
+        %script{:src => 'galleria.classic.js'}
+        :javascript
+          Galleria.run('#galleria');
