@@ -1,18 +1,17 @@
 .container-group
   = render 'gallery/sidebar'
   .container
-    .content.gallery
-      %h1.center
-        = @album.nil? ? "Gallery" : @album.name
-      - if @album.nil?
-        %h4.center
-          Please select an album on the left
-        = render "home/contact"
-      =#TODO  display @pictures collection as thumbnails
-      - if @album
-        #galleria
-          - @pictures.each do |picture|
-            = image_tag picture.filename
-        %script{:src => 'galleria.classic.js'}
-        :javascript
-          Galleria.run('#galleria');
+    - if @album.nil?
+      .content.gallery
+        %h1.center
+          = @album.nil? ? "Gallery" : @album.name
+          %h4.center
+            Please select an album on the left
+          = render "home/contact"
+    - else
+      #galleria
+        - @pictures.each do |picture|
+          = image_tag picture.filename
+      %script{:src => 'galleria.classic.js'}
+      :javascript
+        Galleria.run('#galleria');
