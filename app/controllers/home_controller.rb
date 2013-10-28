@@ -1,13 +1,5 @@
 class HomeController < ApplicationController
   def index
-  end
-
-  def about
-  end
-
-  def contact
-  end
-
-  def pricing
+    @pictures = Picture.where("slideshow = ?", true)
   end
 end

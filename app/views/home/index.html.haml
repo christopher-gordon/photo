@@ -1,5 +1,19 @@
 .container.home
-  .content.home
-    .mid-container.photo
-      =#TODO js slideshow of enabled pics
-      =image_tag "CheetahFamilySitting_large.jpg", :class => "photo-center"
+  #galleria
+    - @pictures.each do |picture|
+      = image_tag picture.filename
+  %script{:src => 'galleria.classic.js'}
+  :javascript
+    Galleria.configure({
+                        //debug: false TODO: false for production
+                        autoplay: 7000,
+                        fullscreenDoubleTap: true,
+                        showCounter: false,
+                        showImagenav: false,
+                        showInfo: false,
+                        thumbnails: false,
+                        transition: 'fade',
+                        transitionSpeed: 2000,
+                        trueFullscreen: true
+                       });
+    Galleria.run('#galleria');

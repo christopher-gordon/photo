@@ -14,4 +14,7 @@
           = image_tag picture.filename
       %script{:src => 'galleria.classic.js'}
       :javascript
+        Galleria.configure({
+                            initialTransition: 'fade'
+                            });
         Galleria.run('#galleria');
