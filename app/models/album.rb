@@ -4,6 +4,7 @@ class Album < ActiveRecord::Base
   attr_accessible :name
 
   def ordering_list
+    return 0 if pictures.count.zero?
     pictures.map(&:ordering)
   end
 end
