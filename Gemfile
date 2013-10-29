@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'json'
 
 gem 'galleria-rails', github: 'albandiguer/galleria-rails'
+gem 'rmagick'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
