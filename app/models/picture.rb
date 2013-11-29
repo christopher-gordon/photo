@@ -9,11 +9,11 @@ class Picture < ActiveRecord::Base
   attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering
 
   validates_presence_of :title, :description, :filename, :content_type, :album_id
-  validates :filename, :uniqueness => true
+  validates_uniqueness_of :filename
 
   #TODO: move this to album?
   def self.generate_ordering(album)
-    return 0 if album.ordering_list.zero?
+    return 0 if album.ordering_list.empty?
     ordering = album.ordering_list.sort
     ordering.last + 1
   end
@@ -58,7 +58,7 @@ class Picture < ActiveRecord::Base
 
   def self.create_thumbnail(uploaded_image)
     filename = uploaded_image.original_filename
-    image = ImageList.new(Rails.root.join('app', 'assets', 'images', uploaded_image.original_filename))
+    image = Image.read(Rails.root.join('app', 'assets', 'images', uploaded_image.original_filename)).first
     thumbnail = image.thumbnail(0.099)
     thumb_name = filename.gsub(/.jpg/, "_thumb.jpg")
 
