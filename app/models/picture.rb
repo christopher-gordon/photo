@@ -18,6 +18,10 @@ class Picture < ActiveRecord::Base
     ordering.last + 1
   end
 
+  def thumbnail_name
+    filename.gsub(/.jpg/, "_thumb.jpg")
+  end
+
   protected
 
   def self.create(params)

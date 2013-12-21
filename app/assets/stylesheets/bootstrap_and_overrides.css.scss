@@ -5,14 +5,15 @@ body {
   font-size: 14px;
 }
 
-.navbar{
-  .container-fluid {
+.navbar .navbar-inverse .navbar-fixed-top {
+  .navbar-inner {
     background-color: lightsteelblue;
   }
-  .brand {
-    font-size: 18px;
-  }
 }
+ // .brand {
+  //  font-size: 18px;
+  //}
+//}
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
   color: black;

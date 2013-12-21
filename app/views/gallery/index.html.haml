@@ -1,21 +1,12 @@
-.container-group
-  = render 'gallery/sidebar'
-  .container
-    - if @album.nil?
-      .content.gallery
-        %h1.center
-          = @album.nil? ? "Gallery" : @album.name
-          %h4.center
-            Please select an album on the left
-          = render "home/contact"
-    - else
-      #galleria
-        - @pictures.each do |picture|
-          %a{:href => "/assets/#{picture.filename}"}
-            = image_tag thumbnail_name(picture.filename)
-      %script{:src => 'galleria.classic.js'}
-      :javascript
-        Galleria.configure({
-                            initialTransition: 'fade'
-                            });
-        Galleria.run('#galleria');
+.container-fluid
+  .row-fluid
+    .span2
+    .span10
+      %script{:src => 'jquery.isotope.js', :type => "application/javascript"}
+      =# render 'gallery/sidebar'
+      - if @album.nil?
+        .content.gallery
+          - @albums.each do |album|
+            %div{:class => album.name.downcase.strip.gsub(' ', '-')}
+              - album.pictures.each do |picture|
+                = image_tag picture.thumbnail_name

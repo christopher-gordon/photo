@@ -15,7 +15,14 @@
 
 .container {
   margin-left: auto;
-  margin-right: 50px;
+  margin-right: auto;
+}
+
+.container-fluid {
+  #galleria {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .container.footer {

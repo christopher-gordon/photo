@@ -3,4 +3,6 @@
   = f.input :title
   = f.input :description
   = #f.input :slideshow, :as => check_box, input_html: {checked: false}
-  = f.submit 'Add picture'
+
+  .btn.btn-primary
+    = f.submit 'Add picture'
