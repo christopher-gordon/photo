@@ -19,6 +19,15 @@
   margin-right: 25px;
   background-color: lightgray;
   overflow: visible;
+  display: inline-flex;
+}
+
+.gallery {
+  margin-left: 25px;
+  margin-right: 25px;
+ // background-color: lightgray;
+  overflow: visible;
+  display: inline-flex;
 }
 
 .content.contact {
@@ -47,15 +56,19 @@
   margin-left: auto;
 }
 
-.photo-row {
-  padding: 5px;
+.photo {
+  padding: 3px;
 }
 
-.photo-row {
-  .photo {
-  width: 45%;
-  padding: 10px;
-}}
+//.photo-row {
+//  padding: 5px;
+//}
+//
+//.photo-row {
+//  .photo {
+//  width: 45%;
+//  padding: 10px;
+//}}
 
 .ordering {
   width: 45%;

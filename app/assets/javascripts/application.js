@@ -17,3 +17,4 @@
 //
 //= require galleria-1.3
 //= require galleria.classic
+//= require jquery.isotope

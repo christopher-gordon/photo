@@ -2,11 +2,11 @@
   .row-fluid
     .span2
     .span10
-      %script{:src => 'jquery.isotope.js', :type => "application/javascript"}
+      %script{:src => 'jquery.isotope.js'}
       =# render 'gallery/sidebar'
       - if @album.nil?
-        .content.gallery
+        .photo-gallery
           - @albums.each do |album|
-            %div{:class => album.name.downcase.strip.gsub(' ', '-')}
-              - album.pictures.each do |picture|
-                = image_tag picture.thumbnail_name
+            - album.pictures.each do |picture|
+              .photo{:class => album.name.downcase.strip.gsub(' ', '-')}
+                = image_tag picture.filename
