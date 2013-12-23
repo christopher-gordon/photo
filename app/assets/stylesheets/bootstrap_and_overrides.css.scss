@@ -7,7 +7,7 @@ body {
 
 .navbar .navbar-inverse .navbar-fixed-top {
   .navbar-inner {
-    background-color: lightsteelblue;
+    background: lightsteelblue;
   }
 }
  // .brand {
@@ -16,7 +16,7 @@ body {
 //}
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
-  color: black;
+  //color: black;
 }
 
 .pull-right {
@@ -24,7 +24,7 @@ body {
 }
 
 .navbar .divider-vertical {
-  background-color: grey;
+  background-color: lightgrey;
 }
 
 @import "bootstrap-responsive";
