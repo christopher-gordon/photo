@@ -42,9 +42,9 @@ class Picture < ActiveRecord::Base
 
     upload(params[:photo_file])
 
-    picture.save!
-
     create_thumbnail(params[:photo_file])
+
+    picture.save!
   end
 
   private
