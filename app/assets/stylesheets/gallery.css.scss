@@ -84,7 +84,7 @@
   padding: 10px;
 }
 
-.active.nav-header {
+.nav-list.active{
   background-color: lightsteelblue;
   a {
     background-color: grey;
@@ -94,14 +94,31 @@
   }
 }
 
+
+.inactive.nav-header {
+  color: lightgrey;
+}
+
+
 .nav-header {
-  a {
-    color: #4C0000;
-  }
+  color: lightsteelblue;
+  font-weight: normal;
 }
 
 #galleria {
   width: 850px;
   height: 525px;
   background: black;
+}
+
+.min-buffer {
+  min-height: 400px;
+}
+
+.light-grey {
+  color: lightgrey;
+}
+
+.light-steel-blue {
+  color: lightsteelblue;
 }

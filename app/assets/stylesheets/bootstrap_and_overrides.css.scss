@@ -5,19 +5,11 @@ body {
   font-size: 14px;
 }
 
-.navbar .navbar-inverse .navbar-fixed-top {
-  .navbar-inner {
-    background: lightsteelblue;
-  }
-}
  // .brand {
   //  font-size: 18px;
   //}
 //}
 
-.navbar-inverse .brand, .navbar-inverse .nav > li > a {
-  //color: black;
-}
 
 .pull-right {
   float: right;
@@ -25,6 +17,44 @@ body {
 
 .navbar .divider-vertical {
   background-color: lightgrey;
+}
+
+.navbar-inner {
+  background-image: -moz-linear-gradient(top, #dfe7f2, #b0c4de);
+  background-image: -ms-linear-gradient(top, #dfe7f2, #b0c4de);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dfe7f2), to(#b0c4de));
+  background-image: -webkit-linear-gradient(top, #dfe7f2, #b0c4de);
+  background-image: -o-linear-gradient(top, #dfe7f2, #b0c4de);
+  background-image: linear-gradient(top, #dfe7f2, #b0c4de);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#'dfe7f2, endColorstr='#'b0c4de, GradientType=0);
+}
+
+.navbar .brand {
+  padding: 8px 20px 12px;
+  font-size: 20px;
+  color: #000000;
+}
+
+.navbar .divider-vertical {
+  height: 41px;
+  background-color: #c6c6c6;
+  border-right: 1px solid #a9a9a9;
+}
+
+.navbar .nav > li > a {
+  padding: 10px 10px 11px;
+  font-size: 14px;
+  color: black;
+}
+
+.navbar .nav > li > a:hover{
+  background-color: lightsteelblue
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color:red;
 }
 
 @import "bootstrap-responsive";
