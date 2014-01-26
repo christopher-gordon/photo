@@ -1,9 +1,9 @@
 .container-fluid
-  .row-fluid
+  .row-fluid.min-buffer
     .span2.album-list
+      = render 'gallery/sidebar'
     .span10
       %script{:src => 'assets/isotope.pkgd.min.js'}
-      =# render 'gallery/sidebar'
       - if @album.nil?
         .photo-gallery
           - @albums.each do |album|

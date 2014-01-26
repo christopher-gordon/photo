@@ -45,12 +45,37 @@ body {
   padding: 10px 10px 11px;
   font-size: 14px;
   color: black;
+  text-shadow: none;
 }
 
 .navbar .nav > li > a:hover{
   background-color: lightsteelblue
 }
 
+.nav-list > li > a {
+  color: lightgrey;
+}
+
+.nav-list > li.active > a {
+  color: black;
+  background-color: lightsteelblue;
+}
+
+.nav-list > li.inactive > a {
+  text-shadow: none;
+}
+
+.nav-list > li.active > a:hover {
+  color: white;
+  background-color: lightsteelblue;
+}
+
+.nav-list > li.inactive> a:hover {
+  color: black;
+  background-color: lightsteelblue;
+}
+
+//TODO remove
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {

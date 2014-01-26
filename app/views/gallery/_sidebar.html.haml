@@ -1,9 +1,9 @@
-.well.sidebar-nav
-  %ul.nav.nav-list
-    %li.nav-title
-      %h4
-        Albums
-    =#TODO only display album if there are pictures in it
-    -@albums.each do |album|
-      %li.nav-header{:class => ("active" if params[:album] == album.name)}
-        =link_to "#{album.name}", gallery_index_url(:album => album.name)
+%ul.nav.nav-list
+  %li.nav-header
+    %h5{:style => 'font-weight:normal;text-shadow:none;'}
+      ALBUMS
+  %li.inactive
+    =link_to "All", gallery_index_url
+  -@albums.each do |album|
+    %li{:class => (params[:album] == album.name ? "active" : "inactive")}
+      =link_to "#{album.name.titleize}", gallery_index_url(:album => album.name)
