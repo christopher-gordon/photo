@@ -1,6 +1,6 @@
 class GalleryController < ApplicationController
   def index
-    @albums = Album.all.select{|a| a.pictures.count > 0}
+    @albums = Album.all.select{|a| a.pictures.count > 0}.reject{|a| a.name == "None"}
 
     @album = Album.find_by_name(params[:album]) if params[:album]
 
