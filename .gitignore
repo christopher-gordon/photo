@@ -14,4 +14,6 @@
 /log/*.log
 /tmp
 
+*.swp
+.rvmrc
 .DS_Store

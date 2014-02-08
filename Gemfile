@@ -14,7 +14,8 @@ gem 'simple_form'
 
 gem 'json'
 
-gem 'galleria-rails', github: 'albandiguer/galleria-rails'
+#gem 'galleria-rails'
+gem 'rails-gallery'
 gem 'rmagick'
 
 group :test, :development do
