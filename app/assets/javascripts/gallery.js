@@ -1,10 +1,11 @@
-$(document).ready(function() {
+$(window).load(function() {
   Gallery.loadIsotope();
 });
 
 Gallery = {
   loadIsotope: function() {
     var $container = $('.photo-gallery');
+
     $container.isotope({
       //containerClass: 'gallery',
       containerStyle: 'position: static;',
