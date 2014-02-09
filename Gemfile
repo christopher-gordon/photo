@@ -18,6 +18,8 @@ gem 'json'
 gem 'rails-gallery'
 gem 'rmagick'
 
+gem 'sorcery'
+
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end

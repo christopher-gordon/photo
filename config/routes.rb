@@ -1,6 +1,10 @@
 Photo::Application.routes.draw do
   get "home/index"
 
+  resources :user_sessions, :only => [:new, :create, :destroy]
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'logout' => 'user_sessions#destroy', :as => :logout
+
   resources :gallery, :only => [:index]
   resources :admin, :only => [:index]
   resources :pictures, :except => [:index, :edit, :update, :destroy]
@@ -10,8 +14,8 @@ Photo::Application.routes.draw do
   match "/pricing" => "home#pricing"
   match "/contact" => "home#contact"
 
-  match "/admin/upload" => "admin#upload"
-  match "/admin/order" => "admin#order"
+ #match "/admin/upload" => "admin#upload"
+ #match "/admin/order" => "admin#order"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
