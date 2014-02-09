@@ -7,4 +7,8 @@ class Album < ActiveRecord::Base
     return [] if pictures.count.zero?
     pictures.map(&:ordering)
   end
+
+  def css_filter_name
+    name.downcase.strip.gsub(/ /,'-')
+  end
 end

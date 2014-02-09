@@ -1,9 +1,9 @@
-%ul.nav.nav-list
+%ul.nav.nav-list#filters
   %li.nav-header
     %h5{:style => 'font-weight:normal;text-shadow:none;'}
       ALBUMS
   %li.inactive
-    =link_to "All", gallery_index_url
+    %a{:href => "#", "data-filter" => "*"} All
   -@albums.each do |album|
     %li{:class => (params[:album] == album.name ? "active" : "inactive")}
-      =link_to "#{album.name.titleize}", gallery_index_url(:album => album.name)
+      %a{:href => "#", "data-filter" => ".#{album.css_filter_name}"} #{album.name.titleize}

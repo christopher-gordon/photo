@@ -15,6 +15,12 @@ Gallery = {
       resizeable: true,
       resizesContainer: true
     });
+
+    $('#filters a').click(function(){
+      var selector = $(this).attr('data-filter');
+      $container.isotope({ filter: selector });
+      return false;
+    });
 //
 //    $container.find('.photo').hover(
 //      function() {
