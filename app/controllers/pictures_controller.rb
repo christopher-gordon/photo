@@ -1,4 +1,6 @@
 class PicturesController < ApplicationController
+  skip_before_filter :require_login, except: [:new, :create]
+
   def index
   end
 

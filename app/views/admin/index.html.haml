@@ -1,8 +1,16 @@
-%h1.center Control Panel
+.center
+  %h1 Control Panel
+  %br
 
-%h4.center
-  = link_to "Add a new album", new_album_path
+  %h4
+    = link_to "Add a new album", new_album_path
 
-%h4.center
-  = link_to "Add a new picture", new_picture_path
+  %h4
+    = link_to "Add a new picture", new_picture_path
+
+  %br
+  %br
+  %br
+  %br
+  = link_to "Logout", :logout, :method => :post
 

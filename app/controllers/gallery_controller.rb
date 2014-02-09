@@ -1,4 +1,6 @@
 class GalleryController < ApplicationController
+  skip_before_filter :require_login
+
   def index
     @albums = Album.all.select{|a| a.pictures.count > 0}.reject{|a| a.name == "None"}
 
