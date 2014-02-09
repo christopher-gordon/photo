@@ -1,6 +1,8 @@
 class Album < ActiveRecord::Base
   has_many :pictures
 
+  validates_uniqueness_of :name
+
   attr_accessible :name
 
   def ordering_list
@@ -11,4 +13,5 @@ class Album < ActiveRecord::Base
   def css_filter_name
     name.downcase.strip.gsub(/ /,'-')
   end
+
 end
