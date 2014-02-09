@@ -1,0 +1,9 @@
+%h1.center Create a new album
+
+.center.light
+  = form_for @album, :url => albums_path do |f|
+    .bold
+      = label_tag :name, "Name"
+      = f.text_area :name, :rows => 1
+
+    = f.submit 'Add album', class: "btn btn-primary"

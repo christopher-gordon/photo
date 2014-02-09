@@ -11,7 +11,6 @@ class PicturesController < ApplicationController
   end
 
   def create
-    puts "create controller"
     picture_params = params[:picture]
 
     if Picture.create(picture_params)
