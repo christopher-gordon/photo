@@ -2,7 +2,7 @@
 
 .center.light
   = form_for @picture, :url => pictures_path do |f|
-    .bold
+    .bold{:style=>"color:lightgrey;"}
       = label_tag :upload_photo, "Choose photo to upload:"
     = f.file_field :photo_file
     %br
