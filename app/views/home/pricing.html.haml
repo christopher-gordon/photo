@@ -1,47 +1,43 @@
 .container
   .row
-    .content.pricing
-      .center
-        %h1.under Pricing
-        %br
-        .ridge.blue
-          %table.center
-            %tr
-              %th{:colspan => 2}
-                %h3 Photo Prints
-            %tr
-              %td 8 x 10:
-              %td $60
-            %tr
-              %td 11 x 14:
-              %td $65
-            %tr
-              %td 12 x 18:
-              %td $70
-        %br  
-        .ridge.blue
-          %table.center
-            %tr
-              %th{:colspan => 2}
-                %h3 Canvas Wrap
-            %tr
-              %td 12 x 18:
-              %td $85
-            %tr
-              %td 16 x 20:
-              %td $95
-            %tr
-              %td 18 x 24:
-              %td $115
-            %tr
-              %td 20 x 30:
-              %td $140
-        %br
-        %p *Other sizes available
-        %br
-        %br  
-        .ridge.lightgrey
-          %p If you would like to make a purchase, please e-mail or call at your convenience.
-          %h4 (312) 527 1036
-          %a{:href => "mailto:cgordonphoto@gmail.com"}
-            %h4 cgordonphoto@gmail.com
+    .center.pricing-table
+      %br
+      %table.table.table-striped.table-bordered
+        %tr
+          %th{:colspan => 2}
+            %h3.light-blue-shadow{:style => 'text-align:center;'} Photo Prints
+        %tr.price-style
+          %td 8 x 10
+          %td $60
+        %tr.price-style
+          %td 11 x 14
+          %td $65
+        %tr.price-style
+          %td 12 x 18
+          %td $70
+      %br
+      %table.table.table-striped.table-bordered
+        %tr
+          %th{:colspan => 2}
+            %h3.light-blue-shadow{:style => 'text-align:center;'} Canvas Wrap
+        %tr.price-style
+          %td 12 x 18
+          %td $85
+        %tr.price-style
+          %td 16 x 20
+          %td $95
+        %tr.price-style
+          %td 18 x 24
+          %td $115
+        %tr.price-style
+          %td 20 x 30
+          %td $140
+      %br
+      %p.light-grey *Other sizes are available
+      %br
+      %br  
+      .well{:style=>'text-shadow: lightblue 0px 0px 1px;'}
+        %p{:style=>'font-weight:bold;'} If you would like to make a purchase, please e-mail or call at your convenience.
+        %h4 (312) 527 1036
+        %a{:href => "mailto:cgordonphoto@gmail.com"}
+          %h4 cgordonphoto@gmail.com
