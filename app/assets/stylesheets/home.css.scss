@@ -50,10 +50,47 @@
   background-color: lightsteelblue;
 }
 
+.light-blue-shadow {
+  text-shadow: lightblue 1px 1px 1px;
+}
+
+.grey-blue {
+  color: #6b797f;
+}
+
 .lightgrey {
   background-color: lightgrey;
 }
 
-table.center {
-  //margin: 10px;
+.light-grey {
+  text-color: lightgrey;
 }
+
+table {
+  table-layout: fixed;
+}
+
+tr.price-style > td {
+  //color:black;
+  font-weight: bold;
+  font-size: 18px;
+  //text-shadow: lightblue 0px 0px 1px;
+}
+
+.table-striped tbody>tr:nth-child(even)>td,.table-striped tbody>tr:nth-child(odd)>th {
+  background-color: #718087;
+  border-color: lightblue;
+  text-align: center;
+}
+
+.table-striped tbody>tr:nth-child(odd)>td,.table-striped tbody>tr:nth-child(odd)>th {
+  background-color: #aabac1;
+  border-color: lightblue;
+  text-align: center;
+}
+
+.well {
+  background-color: #aabac1;
+  border-color: #aabac1;
+}
+
