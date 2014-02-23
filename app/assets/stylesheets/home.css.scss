@@ -25,13 +25,24 @@
   //width: 100%;
 }
 
-.content {
-  .about {
-    background-color: lightsteelblue;
-    margin-right: 10px;
-    margin-left: 10px;
-    //max-width: 553px;
-  }
+.about {
+  background-color: #aabac1;
+  color: #333333;
+  border-color: lightblue;
+  border-radius: 20px;
+  padding: 15px;
+  font-family: rosario;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: lightblue 1px 1px 1px;
+
+  background-image: -moz-linear-gradient(top, #aabac1, #95AEBA);
+  background-image: -ms-linear-gradient(top, #aabac1, #95AEBA);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#aabac1), to(#95AEBA));
+  background-image: -webkit-linear-gradient(top, #aabac1, #95AEBA);
+  background-image: -o-linear-gradient(top, #aabac1, #95AEBA);
+  background-image: linear-gradient(top, #aabac1, #95AEBA);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#'aabac1, endColorstr='#'95AEBA, GradientType=0);
 }
 
 .content.pricing {
@@ -92,9 +103,18 @@ tr.price-style > td {
 .well {
   background-color: #aabac1;
   border-color: #aabac1;
+
+  background-image: -moz-linear-gradient(top, #aabac1, #95AEBA);
+  background-image: -ms-linear-gradient(top, #aabac1, #95AEBA);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#aabac1), to(#95AEBA));
+  background-image: -webkit-linear-gradient(top, #aabac1, #95AEBA);
+  background-image: -o-linear-gradient(top, #aabac1, #95AEBA);
+  background-image: linear-gradient(top, #aabac1, #95AEBA);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#'aabac1, endColorstr='#'95AEBA, GradientType=0);
 }
 
 .img-polaroid {
-  border-color: lightgrey;
-  background-color: gray;
+  border-color: lightblue;
+  background-color: #95AEBA;
+  border-radius: 20px;
 }
