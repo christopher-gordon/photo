@@ -9,4 +9,4 @@
           - @albums.each do |album|
             - album.pictures.each do |picture|
               .photo.isotope-item{:class => album.name.downcase.strip.gsub(' ', '-')}
-                = link_to image_tag(picture.filename), picture_path(picture)
+                = link_to image_tag(picture.filename, :title=>"#{picture.title}"), picture_path(picture)
