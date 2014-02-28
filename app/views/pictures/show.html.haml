@@ -10,6 +10,9 @@
       = image_tag "#{@picture.filename}", {:style=>"max-width:900px;max-height:700px;"}
 
       -#TODO -style description, color
-      %h5= "#{@picture.description}"
+      .light-grey
+        %br
+        %h4= @picture.title
+        %h6= @picture.description
 
   .span2
