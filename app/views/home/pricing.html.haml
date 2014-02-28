@@ -1,43 +1,56 @@
 .container
   .row
     .center.pricing-table
-      %br
-      %table.table.table-striped.table-bordered
-        %tr
-          %th{:colspan => 2}
-            %h3.light-blue-shadow{:style => 'text-align:center;'} Photo Prints
-        %tr.price-style
-          %td 8 x 10
-          %td $60
-        %tr.price-style
-          %td 11 x 14
-          %td $65
-        %tr.price-style
-          %td 12 x 18
-          %td $70
-      %br
-      %table.table.table-striped.table-bordered
-        %tr
-          %th{:colspan => 2}
-            %h3.light-blue-shadow{:style => 'text-align:center;'} Canvas Wrap
-        %tr.price-style
-          %td 12 x 18
-          %td $85
-        %tr.price-style
-          %td 16 x 20
-          %td $95
-        %tr.price-style
-          %td 18 x 24
-          %td $115
-        %tr.price-style
-          %td 20 x 30
-          %td $140
-      %br
-      %p.light-grey *Other sizes are available
-      %br
-      %br  
-      .well{:style=>'text-shadow: lightblue 0px 0px 1px;'}
-        %p{:style=>'font-weight:bold;'} If you would like to make a purchase, please e-mail or call at your convenience.
-        %h4 (312) 527 1036
-        %a{:href => "mailto:cgordonphoto@gmail.com"}
-          %h4 cgordonphoto@gmail.com
+      .span6
+        %br
+        %table.table.table-striped.table-bordered
+          %tr
+            %th{:colspan => 2}
+              %h3.light-blue-shadow{:style => 'text-align:center;'} Photo Prints
+          %tr.price-style
+            %td 8 x 10
+            %td $60
+          %tr.price-style
+            %td 11 x 14
+            %td $65
+          %tr.price-style
+            %td 12 x 18
+            %td $70
+        %br
+        %table.table.table-striped.table-bordered
+          %tr
+            %th{:colspan => 2}
+              %h3.light-blue-shadow{:style => 'text-align:center;'} Canvas Wrap
+          %tr.price-style
+            %td 12 x 18
+            %td $85
+          %tr.price-style
+            %td 16 x 20
+            %td $95
+          %tr.price-style
+            %td 18 x 24
+            %td $115
+          %tr.price-style
+            %td 20 x 30
+            %td $140
+        %p.light-grey *Other sizes are available
+      .span6
+        .light-grey
+          %br
+          -#TODO: link
+          %h3 Please click here to see framing options.
+          %p Framing is custom and varies depending on the material, matting, etc.
+          %p Please call to discuss your specific needs.
+          %br
+          %hr
+          %br
+          %p Images are displayed in lower resolution for ease of viewing on your computer. Actual prints will be of the highest quality.
+          %p Please note that color calibration varies from monitor to monitor. Final product may appear slightly different than what you see on your computer.
+          %br
+          %hr
+          %br
+        .contact-info.light-grey{:style=>'text-shadow: lightblue 0px 0px 1px;'}
+          %p{:style=>'font-weight:bold;'} If you would like to make a purchase, please e-mail or call at your convenience.
+          %h4 (312) 527 1036
+          %a{:href => "mailto:cgordonphoto@gmail.com"}
+            %h4 cgordonphoto@gmail.com
