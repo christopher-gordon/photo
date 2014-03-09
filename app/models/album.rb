@@ -1,5 +1,4 @@
 class Album < ActiveRecord::Base
-  belongs_to :collection
   has_many :pictures
 
   validates_uniqueness_of :name

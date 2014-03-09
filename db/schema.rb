@@ -11,16 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140304215640) do
+ActiveRecord::Schema.define(:version => 20140209175654) do
 
   create_table "albums", :force => true do |t|
-    t.string  "name"
-    t.string  "location"
-    t.integer "collection_id"
-  end
-
-  create_table "collections", :force => true do |t|
     t.string "name"
+    t.string "location"
   end
 
   create_table "pictures", :force => true do |t|
