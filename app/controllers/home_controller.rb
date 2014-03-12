@@ -4,4 +4,8 @@ class HomeController < ApplicationController
   def index
     @pictures = Picture.where("slideshow = ?", true)
   end
+
+  def framing
+    @pictures = Picture.all.select{|pic| pic.album.name == "Frames"}
+  end
 end

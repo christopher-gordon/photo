@@ -13,6 +13,7 @@ Photo::Application.routes.draw do
   match "/about" => "home#about"
   match "/pricing" => "home#pricing"
   match "/contact" => "home#contact"
+  match "/framing" => "home#framing"
 
  #match "/admin/upload" => "admin#upload"
  #match "/admin/order" => "admin#order"

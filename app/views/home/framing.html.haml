@@ -1,0 +1,13 @@
+.row-fluid
+  .span1
+    %br
+    %br
+    = link_to 'Back', :back, :style => 'color:lightgrey;margin-left:15%;font-size:13px;'
+
+  .span11
+    - @pictures.in_groups_of(4).each do |picture_group|
+      .row{:style=>"text-align:center;"}
+        - picture_group.each do |picture|
+          .span3
+            = image_tag picture.filename, :width => 200, :title=>"#{picture.title}", :style => "padding:25px;"
+
