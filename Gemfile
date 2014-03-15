@@ -31,7 +31,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
+  #gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -41,6 +41,7 @@ gem 'jquery-rails'
 #for heroku
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 # To use ActiveModel has_secure_password
