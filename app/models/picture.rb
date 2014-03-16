@@ -56,7 +56,7 @@ class Picture < ActiveRecord::Base
   end
 
   def self.upload(image)
-    File.open(Rails.root.join('app', 'assets', 'images', image.original_filename), 'wb') do |file|
+    File.open(Rails.root.join('public', 'assets', image.original_filename), 'wb') do |file|
       file.write(image.read)
     end
   end
