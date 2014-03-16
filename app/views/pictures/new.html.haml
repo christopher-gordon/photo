@@ -1,6 +1,7 @@
 %h1.center Add a new photo
 
 .center.light
+  %script{:src => 'galleria.classic.js'}
   = form_for @picture, :url => pictures_path do |f|
     .bold{:style=>"color:lightgrey;"}
       = label_tag :upload_photo, "Choose photo to upload:"
