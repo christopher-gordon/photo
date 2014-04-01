@@ -18,6 +18,9 @@ gem 'json'
 gem 'rails-gallery'
 gem 'rmagick'
 
+gem 'carrierwave'
+gem 'cloudinary'
+
 gem 'sorcery'
 
 group :test, :development do
