@@ -44,7 +44,7 @@ test724x6hi.jpg: test724x6hi-6801e08bc42e102cbe5cb8d1d309f1c8.jpg
 test724x6lo.jpg: test724x6lo-f9a6230be0ad228622b5b1002956f917.jpg
 test728x12hi.jpg: test728x12hi-2668f54166731aac6127f23712489e63.jpg
 application.js: application-c654b95ea3e04c2d6d064fac35d95b49.js
-application.css: application-2e8f6b47f3f65ccd0582b91a65fe6498.css
+application.css: application-e620c5803adcc4c721fa1b8a9a6d1eb8.css
 jquery.min.map: jquery.min-0633f0a59e3d0cd55ac3518f228b2893.map
 gallery/galleria/classic/loader.gif: gallery/galleria/classic/loader-c15cb1a279a0b8df9fcab677017eadaf.gif
 gallery/galleria/classic/map.png: gallery/galleria/classic/map-82b2f4c1f537fead42dcd3a468072b73.png
