@@ -15,6 +15,7 @@ Photo::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
+  # #TODO: CHANGE TO TRUE AS FALLBACK OPTION
   config.assets.compile = false
 
   # Generate digests for assets URLs
