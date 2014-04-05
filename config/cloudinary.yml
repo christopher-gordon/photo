@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dnsyay3ko
+  api_key: '196782395433381'
+  api_secret: scQEAGiuXqvqzMUQkONWpYchkHo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dnsyay3ko
+  api_key: '196782395433381'
+  api_secret: scQEAGiuXqvqzMUQkONWpYchkHo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dnsyay3ko
+  api_key: '196782395433381'
+  api_secret: scQEAGiuXqvqzMUQkONWpYchkHo
+  enhance_image_tag: true
+  static_image_support: false
