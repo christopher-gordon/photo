@@ -40,7 +40,13 @@ class Picture < ActiveRecord::Base
     picture.album_id = album.id
     picture.ordering = generate_ordering album
 
-    upload(params[:photo_file])
+    #not needed after Cloudinary is used
+    #upload(params[:photo_file])
+
+    response = Cloudinary::Uploader.upload(params[:photo_file])
+    puts "RESPONSE FROM CLOUDINARY"
+    puts response
+
 
     #no thumbnail creation for now
     #create_thumbnail(params[:photo_file])
