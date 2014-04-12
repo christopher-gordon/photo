@@ -9,7 +9,7 @@ class Picture < ActiveRecord::Base
   attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering
 
   validates_presence_of :title, :description, :filename, :content_type, :album_id
-  validates_uniqueness_of :filename
+  validates_uniqueness_of :filename, :cloudinary_url
 
   #TODO: move this to album?
   def self.generate_ordering(album)
@@ -34,7 +34,7 @@ class Picture < ActiveRecord::Base
     #picture.location = params[:location]
     picture.content_type = params[:photo_file].content_type
     picture.filename = params[:photo_file].original_filename
-    picture.slideshow = (params[:slideshow] == 0 ? false : true)
+    picture.slideshow = params[:slideshow] == "1"
 
     album = Album.find_by_name(params[:album])
     picture.album_id = album.id
@@ -43,15 +43,16 @@ class Picture < ActiveRecord::Base
     #not needed after Cloudinary is used
     #upload(params[:photo_file])
 
-    response = Cloudinary::Uploader.upload(params[:photo_file])
-    puts "RESPONSE FROM CLOUDINARY"
-    puts response
+    return false unless picture.save
 
+    response = Cloudinary::Uploader.upload(params[:photo_file])
 
     #no thumbnail creation for now
     #create_thumbnail(params[:photo_file])
 
-    picture.save!
+    picture.cloudinary_url = response["url"]
+    picture.cloudinary_public_id = "#{response["public_id"]}.#{response["format"]}"
+    picture.save
   end
 
   private

@@ -23,6 +23,7 @@
               - picture_group.each do |picture|
                 %td.photo
                   - if picture
+                    -#TODO: change to use cl_image_tag, or remove page
                     = image_tag picture.filename
             %tr.ordering
               - picture_group.each do |picture|

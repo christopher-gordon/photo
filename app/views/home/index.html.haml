@@ -1,7 +1,7 @@
 .container-fluid.home
   #galleria
     - @pictures.each do |picture|
-      = image_tag picture.filename
+      = cl_image_tag picture.cloudinary_public_id
   %script{:src => 'galleria.classic.js'}
   :javascript
     Galleria.configure({

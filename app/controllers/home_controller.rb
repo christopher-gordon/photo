@@ -6,6 +6,6 @@ class HomeController < ApplicationController
   end
 
   def framing
-    @pictures = Picture.all.select{|pic| pic.album.name == "Frames"}
+    @pictures = Picture.all.select{|pic| pic.album.name.capitalize == "Frames"}
   end
 end
