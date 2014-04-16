@@ -6,7 +6,7 @@ class Picture < ActiveRecord::Base
   #TODO - migration - remove thumbnail
   belongs_to :album
 
-  attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering
+  attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering, :cloudinary_url, :cloudinary_public_id
 
   validates_presence_of :title, :description, :filename, :content_type, :album_id
   validates_uniqueness_of :filename, :cloudinary_url
