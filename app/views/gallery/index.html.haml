@@ -7,7 +7,7 @@
       %script{:src => 'assets/isotope.pkgd.min.js'}
       - if @album.nil?
         .photo-gallery.isotope
-          - @albums.sort_by(&:name).each do |album|
+          - @albums.each do |album|
             - album.pictures.each do |picture|
               .photo.isotope-item{:class => album.name.downcase.strip.gsub(' ', '-')}
                 = link_to cl_image_tag(picture.cloudinary_public_id, :title=>"#{picture.title}"), picture_path(picture)
