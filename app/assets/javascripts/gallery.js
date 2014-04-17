@@ -19,6 +19,7 @@ Gallery = {
     $('#filters a').click(function(){
       var selector = $(this).attr('data-filter');
       $container.isotope({ filter: selector });
+      $container.isotope('reloadItems').isotope();
       return false;
     });
 //
