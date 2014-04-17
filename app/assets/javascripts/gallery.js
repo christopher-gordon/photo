@@ -12,6 +12,9 @@ Gallery = {
       filter: '*',
       itemSelector: '.photo',
       layoutMode : 'masonry',
+      masonry: {
+        columnWidth: 256
+      },
       resizeable: true,
       resizesContainer: true
     });
@@ -19,7 +22,7 @@ Gallery = {
     $('#filters a').click(function(){
       var selector = $(this).attr('data-filter');
       $container.isotope({ filter: selector });
-      $container.isotope('reloadItems').isotope();
+      //$container.isotope('reloadItems').isotope();
       return false;
     });
 //
