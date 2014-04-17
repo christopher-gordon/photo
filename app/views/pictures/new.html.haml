@@ -24,7 +24,7 @@
     =# label_tag :album_label, "Select an album"
     %br
     %br
-    = f.select :album, options_for_select(Album.all.map(&:name)), :prompt => 'Please select an album'
+    = f.select :album, options_for_select(Album.all.map(&:name).map(&:capitalize).sort), :prompt => 'Please select an album'
     %br
 
     %br
