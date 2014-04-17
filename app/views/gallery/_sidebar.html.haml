@@ -6,4 +6,4 @@
     %a{:href => "#", "data-filter" => "*"} All
   -@albums.sort_by(&:name).each do |album|
     %li{:class => (params[:album] == album.name ? "active" : "inactive")}
-      %a{:href => "#", "data-filter" => ".#{album.css_filter_name}"} #{album.name.capitalize}
+      %a{:href => "#", "data-filter" => ".#{album.css_filter_name}"} #{album.name.titleize}
