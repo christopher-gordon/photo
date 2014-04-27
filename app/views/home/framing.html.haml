@@ -10,5 +10,9 @@
       .row{:style=>"text-align:center;"}
         - picture_group.compact.each do |picture|
           .span3
-            = cl_image_tag picture.cloudinary_public_id, :width => 200, :title=>"#{picture.title}", :style => "padding:25px;"
+            .row
+              = cl_image_tag picture.cloudinary_public_id, :width => 200, :title=>"#{picture.title}", :style => "padding:25px;"
+            .row
+              .center.frame-titles
+                = picture.title
 
