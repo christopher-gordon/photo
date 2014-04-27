@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'RMagick' #TODO REMOVE?
 
 class Picture < ActiveRecord::Base
   include Magick
@@ -20,6 +20,11 @@ class Picture < ActiveRecord::Base
 
   def thumbnail_name
     filename.gsub(/.jpg/, "_thumb.jpg")
+  end
+
+  def update_picture(new_attributes)
+    album = Album.find_by_name(new_attributes.delete('album'))
+    update_attributes(new_attributes.merge!({album_id: album.id}))
   end
 
   protected

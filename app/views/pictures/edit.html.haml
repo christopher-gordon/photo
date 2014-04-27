@@ -1,0 +1,58 @@
+%h1.center Edit this photo
+%script{:src => 'galleria.classic.js'}
+
+
+.row-fluid
+  .span2
+    %br
+    %br
+    = link_to 'Back', :back, :style => 'color:lightgrey;margin-left:15%;font-size:13px;'
+
+  .span8
+    .center
+      = cl_image_tag @picture.cloudinary_public_id, {:style=>"max-width:800px;max-height:700px;"}
+
+      .light-grey
+        %br
+        %h4
+          Current title:
+        = @picture.title
+        %h4
+          Current description:
+        = @picture.description
+
+        %h4 Part of slideshow?
+        = @picture.slideshow
+
+  .span2
+
+%hr
+.row.center.light
+  %h3.center Make your changes below
+  %br
+
+  = form_for @picture, :url => picture_path do |f|
+    = label_tag :title, "Title (required)"
+    = f.text_area :title, :rows => 2
+
+    = label_tag :description, "Description"
+    = f.text_area :description, :rows => 5
+
+    =# label_tag :location, "Location"
+    =# f.text_area :location
+    =# label_tag :album_label, "Select an album"
+    %br
+    %br
+    = f.select :album, options_for_select(Album.all.map(&:name).map(&:titleize).sort, :selected => @picture.album.name.titleize)
+    %br
+
+    %br
+    = label_tag :slideshow_label, "Part of slideshow?"
+    = f.check_box :slideshow, :checked => @picture.slideshow
+    = label_tag :checkbox_label, "Yes"
+
+    %br
+    %br
+    %br
+
+    = f.submit 'Submit changes', class: "btn btn-primary"
