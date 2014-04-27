@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   skip_before_filter :require_login, except: [:new, :create, :edit]
-  before_filter :get_picture, except: [:create]
+  before_filter :get_picture, except: [:new, :create]
 
   def create
     picture_params = params[:picture]
