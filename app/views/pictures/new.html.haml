@@ -4,7 +4,7 @@
   %script{:src => 'galleria.classic.js'}
   = form_for @picture, :url => pictures_path do |f|
     .bold{:style=>"color:lightgrey;"}
-      = label_tag :upload_photo, "Choose photo to upload:"
+      = label_tag :upload_photo, "Choose photo to upload (required):"
     %br
     = f.file_field :photo_file
     %br
@@ -13,7 +13,7 @@
     =# label_tag :upload_thumbnail, "Upload the matching thumbnail"
     =# f.file_field :thumbnail_file
 
-    = label_tag :title, "Title"
+    = label_tag :title, "Title (required)"
     = f.text_area :title, :rows => 2
 
     = label_tag :description, "Description"
@@ -24,7 +24,7 @@
     =# label_tag :album_label, "Select an album"
     %br
     %br
-    = f.select :album, options_for_select(Album.all.map(&:name).map(&:titleize).sort), :prompt => 'Please select an album'
+    = f.select :album, options_for_select(Album.all.map(&:name).map(&:titleize).sort), :prompt => 'Please select an album (upload)'
     %br
 
     %br
