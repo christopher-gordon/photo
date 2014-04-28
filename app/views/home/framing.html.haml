@@ -11,7 +11,7 @@
         - picture_group.compact.each do |picture|
           .span3
             .row
-              = cl_image_tag picture.cloudinary_public_id, :width => 200, :title=>"#{picture.title}", :style => "padding:25px;"
+              = link_to cl_image_tag(picture.cloudinary_public_id, :width => 200, :title=>"#{picture.title}", :style => "padding:25px;"), picture_path(picture)
             .row
               .center.frame-titles
                 = picture.title
