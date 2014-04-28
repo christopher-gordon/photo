@@ -1,7 +1,6 @@
 %h1.center Edit this photo
 %script{:src => 'galleria.classic.js'}
 
-
 .row-fluid
   .span2
     %br
@@ -23,8 +22,6 @@
 
         %h4 Part of slideshow?
         = @picture.slideshow
-
-  .span2
 
 %hr
 .row.center.light
@@ -55,4 +52,7 @@
     %br
     %br
 
-    = f.submit 'Submit changes', class: "btn btn-primary"
+    = f.submit 'Submit changes', class: "btn btn-primary radius"
+
+.row.center
+  = link_to("Delete this picture", picture_path(@picture), method: :delete, class: "btn btn-danger radius", confirm: "Are you sure you want to permanently delete this picture?")

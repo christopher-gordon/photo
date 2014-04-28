@@ -7,7 +7,7 @@ Photo::Application.routes.draw do
 
   resources :gallery, :only => [:index]
   resources :admin, :only => [:index]
-  resources :pictures, :except => [:index, :destroy]
+  resources :pictures, :except => [:index]
   resources :albums, :only => [:new, :index, :create]
 
   match "/about" => "home#about"

@@ -60,6 +60,11 @@ class Picture < ActiveRecord::Base
     picture.save
   end
 
+  def self.remove_from_cloudinary(cloudinary_public_id)
+    public_id = cloudinary_public_id.split("\.").first
+    Cloudinary::Uploader.destroy(public_id)
+  end
+
   private
 
   def self.valid_params?(params)
