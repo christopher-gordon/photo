@@ -54,5 +54,6 @@
 
     = f.submit 'Submit changes', class: "btn btn-primary radius"
 
+%hr
 .row.center
   = link_to("Delete this picture", picture_path(@picture), method: :delete, class: "btn btn-danger radius", confirm: "Are you sure you want to permanently delete this picture?")
