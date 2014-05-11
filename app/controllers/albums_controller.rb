@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+  before_filter :get_album, only: [:edit, :update, :destroy]
+
   def index
     @misc_albums = Album.all.select{|a| a.name == "None" || a.name == 'Frames' || a.name == 'Testing'}
     @albums = (Album.all.sort_by(&:ordering) - @misc_albums)
@@ -20,5 +22,36 @@ class AlbumsController < ApplicationController
     end
 
     redirect_to admin_index_path
+  end
+
+  def update
+    puts params
+    new_name = params[:album][:name]
+
+    if @album.update_attribute :name, new_name
+      flash[:notice] = 'You have successfully updated this album!'
+
+      redirect_to albums_path
+    else
+      flash[:error] = 'There was a problem with updating this album!'
+      redirect_to edit_album_path(@album)
+    end
+  end
+
+  def destroy
+    if @album.destroy
+      flash[:notice] = 'You have successfully deleted this album!'
+
+      redirect_to albums_path
+    else
+      flash[:error] = 'There was a problem with deleting this album!'
+      redirect_to edit_picture_path(@picture)
+    end
+  end
+
+  private
+
+  def get_album
+    @album = Album.find(params[:id])
   end
 end

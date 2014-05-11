@@ -3,9 +3,9 @@
 .center.light
   - @albums.each do |album|
     %h4
-      = "#{album.name} - #{album.pictures.size} pictures"
+      = link_to "#{album.name} - #{album.pictures.size} pictures", edit_album_path(album)
 
   %hr
   - @misc_albums.each do |album|
     %h4
-      = "#{album.name} - #{album.pictures.size} pictures"
+      = link_to "#{album.name} - #{album.pictures.size} pictures", edit_album_path(album)
