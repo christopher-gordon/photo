@@ -5,6 +5,7 @@ class AlbumsController < ApplicationController
 
   def create
     album_params = params[:album]
+    album_params.merge!({ordering: Album.generate_ordering})
     album = Album.new(album_params)
 
     if album.save(album_params)

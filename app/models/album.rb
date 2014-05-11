@@ -3,7 +3,7 @@ class Album < ActiveRecord::Base
 
   validates_uniqueness_of :name
 
-  attr_accessible :name
+  attr_accessible :name, :ordering
 
   def ordering_list
     return [] if pictures.count.zero?
@@ -14,4 +14,9 @@ class Album < ActiveRecord::Base
     name.downcase.strip.gsub(/ /,'-')
   end
 
+  def self.generate_ordering
+    albums = Album.all.sort_by(&:ordering)
+    return 0 if albums.map(&:ordering).uniq == [nil]
+    albums.reject{|a| a.ordering >= 1000}.last.ordering + 1
+  end
 end
