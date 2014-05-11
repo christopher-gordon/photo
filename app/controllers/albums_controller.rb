@@ -1,6 +1,7 @@
 class AlbumsController < ApplicationController
   def index
-    @albums = Album.all.sort_by(&:ordering)
+    @misc_albums = Album.all.select{|a| a.name == "None" || a.name == 'Frames' || a.name == 'Testing'}
+    @albums = (Album.all.sort_by(&:ordering) - @misc_albums)
   end
 
   def new

@@ -5,3 +5,7 @@
     %h4
       = "#{album.name} - #{album.pictures.size} pictures"
 
+  %hr
+  - @misc_albums.each do |album|
+    %h4
+      = "#{album.name} - #{album.pictures.size} pictures"
