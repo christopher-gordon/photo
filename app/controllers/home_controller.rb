@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   skip_before_filter :require_login
 
   def index
-    @pictures = Picture.where("slideshow = ?", true)
+    @pictures = Picture.where("slideshow = ?", true).sort_by{|p| p.album.ordering}
   end
 
   def framing
