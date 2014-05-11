@@ -1,0 +1,7 @@
+%h1.center.light All albums:
+
+.center.light
+  - @albums.each do |album|
+    %h4
+      = "#{album.name} - #{album.pictures.size} pictures"
+

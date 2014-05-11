@@ -1,4 +1,8 @@
 class AlbumsController < ApplicationController
+  def index
+    @albums = Album.all.sort_by(&:ordering)
+  end
+
   def new
     @album = Album.new
   end
