@@ -2,8 +2,8 @@
   %li.nav-header
     %h5{:style => 'font-weight:normal;text-shadow:none;'}
       ALBUMS
-  %li.inactive
+  %li.inactive.album-all-item
     %a{:href => "#", "data-filter" => "*"} All
   -@albums.sort_by(&:name).each do |album|
-    %li{:class => (params[:album] == album.name ? "active" : "inactive")}
+    %li.inactive.album-list-item
       %a{:href => "#", "data-filter" => ".#{album.css_filter_name}"} #{album.name.titleize}

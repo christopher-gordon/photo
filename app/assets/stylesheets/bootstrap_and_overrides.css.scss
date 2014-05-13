@@ -66,7 +66,7 @@ background: linear-gradient(to bottom,  rgba(235,241,246,1) 0%,rgba(171,211,238,
 }
 
 .navbar .nav > li > a:hover{
-  color: lightblue;
+  color: white;
 }
 
 .nav-list > li > a {
@@ -87,6 +87,12 @@ background: linear-gradient(to bottom,  rgba(235,241,246,1) 0%,rgba(171,211,238,
 
 .nav-list > li.inactive> a:hover {
   color: black;
+}
+
+.nav-list > .active > a,
+.nav-list>.active>a:hover,
+.nav-list>.active>a:focus {
+  background-color: lightsteelblue;
 }
 
 //TODO remove

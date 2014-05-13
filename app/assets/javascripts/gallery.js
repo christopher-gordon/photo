@@ -1,8 +1,10 @@
 $(window).load(function() {
   Gallery.loadIsotope();
+  Gallery.albumListWatchers();
 });
 
 Gallery = {
+
   loadIsotope: function() {
     var $container = $('.photo-gallery');
 
@@ -37,5 +39,16 @@ Gallery = {
 //        $container.isotope( 'shiftColumnOfItem', this );
 //      }
 //    );
+  },
+
+  albumListWatchers: function() {
+    albumItems = '.album-all-item a, .album-list-item a';
+
+    $(albumItems).click(function() {
+      $(albumItems).parent().removeClass('active');
+      if($(this).parent().hasClass('album-list-item')){
+        $(this).parent().addClass('active');
+      }
+    })
   }
 }
