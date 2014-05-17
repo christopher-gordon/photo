@@ -4,13 +4,13 @@
       Chris Gordon Photography
     %ul.nav.main
       %li
-        %a{:href => root_path} Home
+        %a{href: root_path, class: ("active" if request.path == root_path)} Home
       %li
-        %a{:href => gallery_index_path} Gallery
+        %a{href: gallery_index_path, class: ("active" if request.path == gallery_index_path)} Gallery
       %li
-        %a{:href => pricing_path} Pricing
+        %a{href: pricing_path, class: ("active" if request.path == pricing_path)} Pricing
       %li
-        %a{:href => about_path} About
+        %a{href: about_path, class: ("active" if request.path == about_path)} About
     %ul.nav.pull-right
       %li.smaller
         %a{:href => "mailto:cgordonphoto@gmail.com"} cgordonphoto@gmail.com

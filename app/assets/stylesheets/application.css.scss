@@ -38,6 +38,10 @@ ul.nav.main {
   padding-left: 15px;
 }
 
+.navbar .nav > li > a.active {
+  color: whitesmoke;
+}
+
 .content {
   background-color: lightsteelblue;
   padding: 20px;
