@@ -5,5 +5,5 @@
   %li.inactive.album-all-item
     %a{:href => "#", "data-filter" => "*"} All
   -@albums.sort_by(&:name).each do |album|
-    %li.inactive.album-list-item
+    %li.album-list-item
       %a{:href => "#", "data-filter" => ".#{album.css_filter_name}"} #{album.name.titleize}

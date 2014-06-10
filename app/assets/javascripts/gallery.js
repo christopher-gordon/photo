@@ -1,6 +1,7 @@
 $(window).load(function() {
   Gallery.loadIsotope();
   Gallery.albumListWatchers();
+  Gallery.setPreviousAlbum();
 });
 
 Gallery = {
@@ -27,18 +28,6 @@ Gallery = {
       //$container.isotope('reloadItems').isotope();
       return false;
     });
-//
-//    $container.find('.photo').hover(
-//      function() {
-//        $(this).css({ height: "+=100" });
-//        // note that element is passed in, not jQuery object
-//        $container.isotope( 'shiftColumnOfItem', this );
-//      },
-//      function() {
-//        $(this).css({ height: "-=100" });
-//        $container.isotope( 'shiftColumnOfItem', this );
-//      }
-//    );
   },
 
   albumListWatchers: function() {
@@ -48,7 +37,25 @@ Gallery = {
       $(albumItems).parent().removeClass('active');
       if($(this).parent().hasClass('album-list-item')){
         $(this).parent().addClass('active');
+        $.post("/set_gallery_session?gallery=" + $(this).attr("data-filter").replace(".", ""));
+      } else {
+        $.post("/set_gallery_session?gallery=");
       }
-    })
+    });
+  },
+
+  setPreviousAlbum: function() { /*TODO:#only on main gallery page*/
+    if(window.location.pathname == "/gallery") {
+      var previousGallery = $.get("/get_gallery_session", function(response) {
+        prevGallery = response["previousGallery"];
+        galleryAlbumClass = "." + prevGallery
+
+        if(prevGallery == "" || prevGallery == "*") {
+          $('a[data-filter="*"]').click();
+        } else {
+          $('a[data-filter=\'' + galleryAlbumClass + '\']').click();
+        }
+      });
+    }
   }
 }

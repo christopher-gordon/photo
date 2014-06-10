@@ -15,6 +15,9 @@ Photo::Application.routes.draw do
   #match "/contact" => "home#contact"
   match "/framing" => "home#framing"
 
+  match "/set_gallery_session" => "application#set_gallery_session", via: :post
+  match "/get_gallery_session" => "application#get_gallery_session", via: :get
+
  #match "/admin/upload" => "admin#upload"
  #match "/admin/order" => "admin#order"
 

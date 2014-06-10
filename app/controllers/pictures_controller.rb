@@ -1,6 +1,11 @@
 class PicturesController < ApplicationController
   skip_before_filter :require_login, except: [:new, :create, :edit, :update, :destroy]
+  skip_before_filter :clear_gallery_session
   before_filter :get_picture, except: [:new, :create]
+
+  def show
+    @album = Album.find_by_name(session[:gallery])
+  end
 
   def new
     @picture = Picture.new
