@@ -4,7 +4,7 @@ class PicturesController < ApplicationController
   before_filter :get_picture, except: [:new, :create]
 
   def show
-    @album = Album.find_by_name(session[:gallery])
+    @album = @picture.album
   end
 
   def new

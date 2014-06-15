@@ -98,6 +98,11 @@
   color: black;
 }
 
+#back-to-gallery > a:hover,
+#album-info > a:hover {
+  font-weight: bold;
+}
+
 
 .inactive.nav-header {
   color: lightgrey;
