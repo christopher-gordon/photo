@@ -3,7 +3,7 @@
   .span2#back-to-gallery{style: "margin: 0px"}
     %br
     %br
-    = link_to 'Gallery', gallery_index_path, :style => 'color:lightgrey;margin-left:15%;font-size:16px;text-decoration:underline;'
+    = link_to "Back to #{@album.name} album", gallery_index_path, :style => 'color:lightgrey;margin-left:15%;font-size:16px;text-decoration:underline;'
 
   .span8{style: "margin: 0px"}
     .center
