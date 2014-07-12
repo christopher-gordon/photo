@@ -6,6 +6,7 @@ Photo::Application.routes.draw do
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
   resources :gallery, :only => [:index]
+  match "/gallery_reset" => "gallery#reset"
   resources :admin, :only => [:index]
   resources :pictures, :except => [:index]
   resources :albums

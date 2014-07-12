@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :require_login
+  before_filter :require_login, except: [:set_gallery_session, :get_gallery_session]
   before_filter :clear_gallery_session, except: [:set_gallery_session, :get_gallery_session]
 
   def set_gallery_session

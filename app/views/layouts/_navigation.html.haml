@@ -6,7 +6,7 @@
       %li
         %a{href: root_path, class: ("active" if request.path == root_path)} Home
       %li
-        %a{href: gallery_index_path, class: ("active" if request.path == gallery_index_path)} Gallery
+        %a#gallery-link{href: gallery_reset_path, class: ("active" if request.path == gallery_index_path)} Gallery
       %li
         %a{href: pricing_path, class: ("active" if request.path == pricing_path)} Pricing
       %li

@@ -7,4 +7,9 @@ class GalleryController < ApplicationController
     @album = Album.find_by_name(params[:album]) if params[:album]
     @pictures = Picture.where("album_id = ?", @album.id) if params[:album]
   end
+
+  def reset
+    cookies.delete(:gallery)
+    redirect_to gallery_index_path
+  end
 end
