@@ -2,7 +2,7 @@
   %script{src: 'galleria.classic.js'}
   .row
     .span1
-    .span6{style: "margin: 0px; min-width: 400px"}
+    .span6{style: "margin: 0px; min-width: 200px"}
       .center
         = cl_image_tag @picture.cloudinary_public_id, {:style=>"max-width:100%;max-height:700px;min-width:200px"}
 
@@ -12,22 +12,20 @@
           %h3= @picture.title
           %h5= @picture.description
 
-    .span5.light-grey#album-info{style: "margin-top: 0px; margin-bottom: 0px; text-align: center; margin-left:1px; min-width: 150px;"}
-      .row
-        #back-to-gallery{style: "margin-left:auto;margin-right:auto; min-width:225px; max-width:100%; text-align:center;"}
-          %br
-          %br
-          = link_to back_to_gallery_or_album_copy, (@album.name.downcase == 'frames' ? framing_path : gallery_index_path), :style => 'color:lightgrey;margin-left:0px;font-size:16px;text-decoration:underline;'
+    .span5.light-grey#album-info{style: "margin-top: 0px; margin-bottom: 0px; text-align: center; min-width: 150px;"}
+      #back-to-gallery{style: "margin-left:auto;margin-right:auto; min-width:225px; max-width:100%; text-align:center;"}
+        %br
+        %br
+        = link_to back_to_gallery_or_album_copy, (@album.name.downcase == 'frames' ? framing_path : gallery_index_path), :style => 'color:lightgrey;margin-left:0px;font-size:16px;text-decoration:underline;'
 
-      .row
-        %br
-        %br
-        %h4= "Album:"
-        %h3= @picture.album.name
-        %h5= "#{index_within_album(@picture)} of #{@album.pictures.size}"
-        - unless first_picture?
-          = link_to 'Previous', picture_path(previous_picture), :style => 'color:lightgrey;font-size:16px;text-decoration:underline;'
-        - if display_hashmark?
-          %span= "|"
-        - unless last_picture?
-          = link_to 'Next', picture_path(next_picture), :style => 'color:lightgrey;font-size:16px;text-decoration:underline;'
+      %br
+      %br
+      %h4= "Album:"
+      %h3= @picture.album.name
+      %h5= "#{index_within_album(@picture)} of #{@album.pictures.size}"
+      - unless first_picture?
+        = link_to 'Previous', picture_path(previous_picture), :style => 'color:lightgrey;font-size:16px;text-decoration:underline;'
+      - if display_hashmark?
+        %span= "|"
+      - unless last_picture?
+        = link_to 'Next', picture_path(next_picture), :style => 'color:lightgrey;font-size:16px;text-decoration:underline;'
