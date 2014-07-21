@@ -1,8 +1,8 @@
 .navbar.navbar-fixed-top
-  .navbar-inner{style: "min-width: 530px;"}
+  .navbar-inner{style: "min-width: 385px;"}
     .brand{style: 'text-shadow:none; margin-left:1px;'}
       Chris Gordon Photography
-    %ul.nav.main
+    %ul.nav.main#menu
       %li
         %a{href: root_path, class: ("active" if request.path == root_path)} Home
       %li
@@ -11,8 +11,9 @@
         %a{href: pricing_path, class: ("active" if request.path == pricing_path)} Pricing
       %li
         %a{href: about_path, class: ("active" if request.path == about_path)} About
-    %ul.nav.pull-right
+    %ul.nav.pull-right#menu-info
       %li.smaller
         %a{:href => "mailto:cgordonphoto@gmail.com"} cgordonphoto@gmail.com
       %li.smaller
         %a{:href => '#'} +1 (312) 527-1036
+    %ul#mobile-menu

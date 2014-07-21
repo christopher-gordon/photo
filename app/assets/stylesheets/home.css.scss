@@ -4,6 +4,25 @@
   background: black;
 }
 
+.slicknav_menu {
+  display:none;
+}
+
+@media screen and (max-width: 750px) {
+/* #menu is the original menu */
+  #menu {
+    display:none;
+  }
+
+  #menu-info {
+    display:none;
+  }
+
+  .slicknav_menu {
+    display:block;
+  }
+}
+
 //.photo {
 //  width: 90%;
 //  margin-left: auto;

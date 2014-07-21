@@ -11,6 +11,13 @@
     = csrf_meta_tags
     = yield(:head)
   %body
+    :javascript
+      $(function(){
+        $('#menu').slicknav({
+          label:'MENU',
+          prependTo:'#mobile-menu'
+        });
+      });
     %header
       = render 'layouts/navigation'
     #main{:role => "main"}
