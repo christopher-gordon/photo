@@ -7,6 +7,11 @@
 .slicknav_menu {
   display:none;
 }
+
+#mobile-brand {
+  display:none;
+}
+
 @media screen and (max-width: 875px) {
 /* #menu is the original menu */
   #menu-info {
@@ -22,6 +27,14 @@
 
   .slicknav_menu {
     display:block;
+  }
+
+  #mobile-brand {
+    display:block;
+  }
+
+  #full-brand {
+    display:none;
   }
 }
 

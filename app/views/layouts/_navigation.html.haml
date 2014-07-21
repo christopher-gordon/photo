@@ -1,7 +1,10 @@
 .navbar.navbar-fixed-top
-  .navbar-inner{style: "min-width: 275px;"}
+  .navbar-inner{style: "min-width: 200px;"}
     .brand{style: 'text-shadow:none; margin-left:1px;'}
-      Chris Gordon Photography
+      #full-brand
+        Chris Gordon Photography
+      #mobile-brand
+        Chris Gordon Photo
     %ul.nav.main#menu
       %li
         %a{href: root_path, class: ("active" if request.path == root_path)} Home
