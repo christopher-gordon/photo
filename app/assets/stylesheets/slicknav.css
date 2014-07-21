@@ -31,7 +31,6 @@
 .slicknav_menu {
     font-size:13px;
     padding:5px;
-    margin-top:3px;
 }
 /* Button */
 .slicknav_btn {
@@ -45,7 +44,17 @@
 /* Button Text */
 .slicknav_menu  .slicknav_menutxt {
     color: #000000;
+    position: relative;
+    top: 2px;
+    left: 0px;
 }
+
+.slicknav_menu .slicknav_icon {
+  position: relative;
+  top: 4px;
+  right: 0px;
+}
+
 /* Button Lines */
 .slicknav_menu .slicknav_icon-bar {
   background-color: #000000;
@@ -53,7 +62,7 @@
 
 .slicknav_nav {
     color:#000000;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-right: 1px;
     margin-bottom: 0px;
     margin-left: auto;
