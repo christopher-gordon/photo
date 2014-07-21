@@ -1,6 +1,6 @@
 #galleria {
   width: 900px;
-  height: 600px;
+  height: 550px;
   background: black;
 }
 
@@ -35,6 +35,11 @@
 
   #full-brand {
     display:none;
+  }
+
+  #galleria .galleria-stage {
+    position: absolute;
+    top: 0px;
   }
 }
 
