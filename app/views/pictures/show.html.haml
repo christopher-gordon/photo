@@ -4,7 +4,7 @@
     .span1
     .span6{style: "margin: 0px; min-width: 200px"}
       .center
-        = cl_image_tag @picture.cloudinary_public_id, {:style=>"max-width:100%;max-height:700px;min-width:200px"}
+        = cl_image_tag(@picture.cloudinary_public_id, transformation: 'individual_picture_90', style: "max-width:100%;max-height:700px;min-width:200px")
 
         -#TODO -style description, color
         .light-grey
