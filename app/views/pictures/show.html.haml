@@ -25,7 +25,13 @@
       - unless last_picture?
         = link_to 'Next', picture_path(next_picture), :style => 'color:lightgrey;font-size:16px;text-decoration:underline;'
 
-      #back-to-gallery{style: "margin-left:auto;margin-right:auto; min-width:225px; max-width:100%; text-align:center;"}
+      #back-to-gallery{style: "margin-left:auto;margin-right:auto; margin-bottom: 50px; min-width:225px; max-width:100%; text-align:center;"}
         %br
         %br
         = link_to back_to_gallery_or_album_copy, (@album.name.downcase == 'frames' ? framing_path : gallery_index_path), :style => 'color:lightgrey;margin-left:0px;font-size:16px;text-decoration:underline;'
+
+      %br
+      %hr
+      %br
+      %h6 Images are displayed in lower resolution for ease of viewing on your computer. Actual prints will be of the highest quality.
+      %h6 Please note that color calibration varies from monitor to monitor. Final product may appear slightly different than what you see on your computer.
