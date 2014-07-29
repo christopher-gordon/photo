@@ -1,7 +1,7 @@
 .container-fluid.home
   #galleria{style: "margin-left:auto; margin-right:auto; max-width:100%;"}
     - @pictures.each do |picture|
-      = cl_image_tag(picture.cloudinary_public_id, transformation: 'homepage_slideshow_50', style: "max-width:100%")
+      = cl_image_tag(picture.cloudinary_public_id, quality: 'jpegmini', sign_url: true, style: "max-width:100%")
   %script{:src => 'galleria.classic.js'}
   :javascript
     Galleria.configure({
