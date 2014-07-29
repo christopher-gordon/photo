@@ -20,7 +20,8 @@ Gallery = {
       },
       pauseOnInteraction: false,
       resizeable: true,
-      resizesContainer: true
+      resizesContainer: true,
+      swipe: 'disabled'
     });
 
     $('#filters a').click(function(){
