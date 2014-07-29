@@ -14,4 +14,4 @@
           - @albums.each do |album|
             - album.pictures.each do |picture|
               .photo.isotope-item{:class => album.name.downcase.strip.gsub(' ', '-')}
-                = link_to cl_image_tag(picture.cloudinary_public_id, title: "#{picture.title}", width: 250, quality: 'jpegmini', sign_url: true), picture_path(picture)
+                = link_to cl_image_tag(picture.cloudinary_public_id, title: "#{picture.title}", transformation: 'gallery_thumbnail_63'), picture_path(picture)
