@@ -18,10 +18,8 @@ Gallery = {
       masonry: {
         columnWidth: 256
       },
-      pauseOnInteraction: false,
       resizeable: true,
       resizesContainer: true,
-      swipe: 'disabled'
     });
 
     $('#filters a').click(function(){
