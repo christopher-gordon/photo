@@ -14,8 +14,17 @@
                         thumbDisplayOrder: false,
                         thumbnails: false,
                         transition: 'fade',
+                        touchTransition: 'fadeslide',
                         transitionSpeed: 3000,
                         trueFullscreen: true,
                         pauseOnInteraction: false
                        });
+    Galleria.ready(function() {
+      this.bind("pause", function(e) {
+        var gallery = Galleria.get(0); // gallery is now the first galleria instance
+        gallery.play();
+      });
+    });
+
     Galleria.run('#galleria');
+
