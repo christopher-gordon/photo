@@ -1,19 +1,19 @@
 .navbar.navbar-fixed-top{style: "margin-bottom:0px;"}
   .navbar-inner{style: "min-width: 200px;"}
     .brand{style: 'text-shadow:none; margin-left:1px;'}
-      #full-brand
+      #full-brand{style: 'text-shadow: 1px 1px whitesmoke;'}
         Chris Gordon Photography
-      #mobile-brand
+      #mobile-brand{style: 'text-shadow: 1px 1px whitesmoke;'}
         Chris Gordon Photo
     %ul.nav.main#menu
       %li
-        %a{href: root_path, class: ("active" if request.path == root_path)} Home
+        %a{href: root_path, class: (request.path == root_path ? "active" : "inactive")} Home
       %li
-        %a#gallery-link{href: gallery_reset_path, class: ("active" if request.path == gallery_index_path)} Gallery
+        %a#gallery-link{href: gallery_reset_path, class: (request.path == gallery_index_path ? "active" : "inactive")} Gallery
       %li
-        %a{href: pricing_path, class: ("active" if request.path == pricing_path)} Pricing
+        %a{href: pricing_path, class: (request.path == pricing_path ? "active" : "inactive")} Pricing
       %li
-        %a{href: about_path, class: ("active" if request.path == about_path)} About
+        %a{href: about_path, class: (request.path == about_path ? "active" : "inactive")} About
     %ul.nav.pull-right#menu-info
       %li.smaller
         %a{:href => "mailto:cgordonphoto@gmail.com"} cgordonphoto@gmail.com
