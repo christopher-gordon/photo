@@ -1,0 +1,22 @@
+%h1.center Add a new blog post
+
+.center.light
+  = form_for @post, :url => posts_path do |f|
+    %br
+    %br
+    = label_tag :title, "Title (required)"
+    = f.text_area :title, :rows => 2
+    %br
+    = label_tag :body, "Body (required)"
+    = f.text_area :body, :rows => 15
+    %br
+    %br
+    .bold{:style=>"color:lightgrey;"}
+      = label_tag :upload_photo, "Choose photo to upload (optional):"
+    %br
+    = f.file_field :photo_file
+    %br
+    %br
+    %br
+
+    = f.submit "Add post", class: "btn btn-primary"

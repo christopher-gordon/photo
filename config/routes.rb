@@ -5,16 +5,18 @@ Photo::Application.routes.draw do
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
-  resources :gallery, :only => [:index]
-  match "/gallery_reset" => "gallery#reset"
   resources :admin, :only => [:index]
-  resources :pictures, :except => [:index]
   resources :albums
+  resources :gallery, :only => [:index]
+  resources :blog, :only => [:index]
+  match "/gallery_reset" => "gallery#reset"
+  resources :pictures, :except => [:index]
+  resources :posts, :only => [:new, :create, :index, :destroy]
 
-  match "/about" => "home#about"
-  match "/pricing" => "home#pricing"
   #match "/contact" => "home#contact"
+  match "/about" => "home#about"
   match "/framing" => "home#framing"
+  match "/pricing" => "home#pricing"
 
   match "/set_gallery_session" => "application#set_gallery_session", via: :post
   match "/get_gallery_session" => "application#get_gallery_session", via: :get
