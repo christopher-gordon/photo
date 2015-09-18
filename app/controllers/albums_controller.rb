@@ -2,7 +2,8 @@ class AlbumsController < ApplicationController
   before_filter :get_album, only: [:edit, :update, :destroy]
 
   def index
-    @misc_albums = Album.all.select{|a| a.name == "None" || a.name == 'Frames' || a.name == 'Testing'}
+    #TODO: centralize the ALBUMS_NOT_FOR_DISPLAY logic
+    @misc_albums = Album.all.select{|a| Album::ALBUMS_NOT_FOR_DISPLAY.include?(a.name)}
     @albums = (Album.all.sort_by(&:ordering) - @misc_albums)
   end
 

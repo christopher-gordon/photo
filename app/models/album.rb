@@ -5,6 +5,8 @@ class Album < ActiveRecord::Base
 
   attr_accessible :name, :ordering
 
+  ALBUMS_NOT_FOR_DISPLAY = ["None", "Frames", "Testing", "Blog"]
+
   def ordering_list
     return [] if pictures.count.zero?
     pictures.map(&:ordering)
