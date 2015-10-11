@@ -8,13 +8,13 @@ Photo::Application.routes.draw do
   resources :admin, :only => [:index]
   resources :albums
   resources :gallery, :only => [:index]
-  resources :blog, :only => [:index]
   match "/gallery_reset" => "gallery#reset"
   resources :pictures, :except => [:index]
   resources :posts, :only => [:new, :create, :index, :destroy]
 
   #match "/contact" => "home#contact"
   match "/about" => "home#about"
+  match "/blog" => "home#blog"
   match "/framing" => "home#framing"
   match "/pricing" => "home#pricing"
 

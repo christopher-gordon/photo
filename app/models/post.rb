@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   # REQUIRED_PARAMS = [:title, :body, :
+  has_one :picture
 
   def self.create(options = {})
     # return false unless _valid_params?(params)
@@ -12,6 +13,10 @@ class Post < ActiveRecord::Base
     post.body = options[:body]
     post.picture_id = picture.try(:id)
     post.save
+  end
+
+  def picture
+    Picture.find(self.picture_id) if self.picture_id
   end
 
   def self._create_picture_for_post(options)
