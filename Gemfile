@@ -25,6 +25,7 @@ gem 'sorcery'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
+  gem "better_errors", "~> 1.1.0"
 end
 
 # Gems used only for assets and not required
