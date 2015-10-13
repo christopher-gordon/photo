@@ -8,16 +8,16 @@
             - @posts.each do |post|
               .row
                 - if post.picture.present?
-                  .span9
+                  .span7
                     .row
                       %h3= post.title
                       %h4= post.created_at.strftime("%B %d, %Y")
                     .row
                       %br
                       %h4= post.body
-                  .span3
+                  .span5
                     .row
-                      = link_to cl_image_tag(post.picture.cloudinary_public_id, :width => 200, quality: 'jpegmini', sign_url: true, dpr: :auto, :title=>"#{post.picture.title}", :style => "padding:25px;"), picture_path(post.picture)
+                      = link_to cl_image_tag(post.picture.cloudinary_public_id, :width => 300, quality: 'jpegmini', sign_url: true, dpr: :auto, :title=>"#{post.picture.title}", :style => "padding:25px;"), picture_path(post.picture)
                 - else
                   .span12
                     .row
