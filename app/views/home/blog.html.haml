@@ -14,7 +14,7 @@
                       %h4= post.created_at.strftime("%B %d, %Y")
                     .row
                       %br
-                      %h4= post.body
+                      %h4{:style => "line-height:25px"}= post.body
                   .span5
                     .row
                       = link_to cl_image_tag(post.picture.cloudinary_public_id, :width => 300, quality: 'jpegmini', sign_url: true, dpr: :auto, :title=>"#{post.picture.title}", :style => "padding:25px;"), picture_path(post.picture)
@@ -25,6 +25,7 @@
                     .row
                       %h4= post.created_at.strftime("%B %d, %Y")
                       %br
-                      %h4= post.body
+                      %h4{:style => "line-height:25px"}= post.body
               .row
+                %br
                 %hr
