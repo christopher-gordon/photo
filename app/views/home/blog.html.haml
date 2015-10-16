@@ -4,7 +4,7 @@
     .center
       .light-grey
         %br
-          - if @posts
+          - if @posts.present?
             %br
             - @posts.each do |post|
               .row
@@ -15,7 +15,7 @@
                       %h4= post.created_at.strftime("%B %d, %Y")
                     .row
                       %br
-                      %h4{:style => "line-height:25px"}= post.body
+                      %h4{:style => "line-height:26px"}= post.body
                   .span5
                     .row
                       = link_to cl_image_tag(post.picture.cloudinary_public_id, :width => 300, quality: 'jpegmini', sign_url: true, dpr: :auto, :title=>"#{post.picture.title}", :style => "padding:25px;"), picture_path(post.picture)
@@ -26,12 +26,13 @@
                     .row
                       %h4= post.created_at.strftime("%B %d, %Y")
                       %br
-                      %h4{:style => "line-height:25px"}= post.body
+                      %h4{:style => "line-height:26px"}= post.body
               .row
                 %br
                 %hr
 
           - else # TODO: remove after first blog post
-            .row.center
-              %h2= "Coming soon!"
-
+            .row
+              %h1= "Coming soon!"
+              %br
+              %br
