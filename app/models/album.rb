@@ -2,6 +2,7 @@ class Album < ActiveRecord::Base
   has_many :pictures
 
   validates_uniqueness_of :name
+  validates_presence_of :ordering
 
   attr_accessible :name, :ordering
 
