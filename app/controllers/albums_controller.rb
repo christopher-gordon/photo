@@ -26,7 +26,6 @@ class AlbumsController < ApplicationController
   end
 
   def update
-    puts params
     new_name = params[:album][:name]
 
     if @album.update_attribute :name, new_name
