@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.2.4"
+ruby "2.2.3"
 
 gem 'rails', '3.2.1'
 
@@ -14,7 +14,7 @@ gem 'sass'
 gem 'bootstrap-sass'
 gem 'simple_form'
 
-gem 'json'
+gem 'json', '1.8.1'
 
 #gem 'galleria-rails'
 gem 'rails-gallery'
