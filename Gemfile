@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.2.4"
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.13'
 
 #database
 gem 'mysql2'
@@ -20,13 +20,13 @@ gem 'json'
 gem 'rails-gallery'
 gem 'rmagick'
 
-gem 'carrierwave'
+# gem 'carrierwave'
 gem 'cloudinary'
 
 gem 'sorcery'
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.0"
+  gem "rspec-rails", "~> 3.0"
   gem "better_errors", "~> 1.1.0"
 end
 
