@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
-ruby "2.2.4"
+ruby "2.1.2"
 
 gem 'rails', '3.2.13'
 
 #database
-gem 'mysql2'
+gem "mysql2", "0.3.17"
 
 #frontend
 gem 'haml'
 gem 'haml-rails'
-gem 'sass'
+gem "sass", "3.2.7"
 gem 'bootstrap-sass'
 gem 'simple_form'
 
@@ -33,8 +33,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem "sass-rails",  "3.2.3"
+  gem "coffee-rails", "~> 3.2.1"
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   #gem 'therubyracer'
