@@ -1,0 +1,14 @@
+%h1.center Add a new blog volume
+
+.center.light
+  = form_for @volume, :url => volumes_path do |f|
+    %br
+    %br
+    = label_tag :name, "Name (required)"
+    = f.text_area :name, :rows => 2
+    %br
+    %br
+    %br
+
+    = f.submit "Add volume", class: "btn btn-primary"
+
