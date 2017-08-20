@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   # REQUIRED_PARAMS = [:title, :body, :
+  belongs_to :volume
   has_one :picture
 
   def self.create(options = {})
