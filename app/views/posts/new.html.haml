@@ -4,6 +4,8 @@
   = form_for @post, :url => posts_path do |f|
     %br
     %br
+    = f.select :volume, options_for_select(Volume.all.map(&:name).map(&:titleize).sort), :prompt => 'Please select a blog volume for this post (required)'
+    %br
     = label_tag :title, "Title (required)"
     = f.text_area :title, :rows => 2
     %br
@@ -15,6 +17,7 @@
       = label_tag :upload_photo, "Choose photo to upload (optional):"
     %br
     = f.file_field :photo_file
+    = f.hidden_field :album, :value => "blog"
     %br
     %br
     %br

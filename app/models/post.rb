@@ -13,6 +13,7 @@ class Post < ActiveRecord::Base
     post.title = options[:title]
     post.body = options[:body]
     post.picture_id = picture.try(:id)
+    post.volume_id = Volume.find_by_name(options[:volume]).try(:id)
     post.save
   end
 

@@ -8,7 +8,7 @@ class Picture < ActiveRecord::Base
 
   attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering, :cloudinary_url, :cloudinary_public_id
 
-  validates_presence_of :title, :filename, :album_id
+  validates_presence_of :title, :filename #, :album_id # TODO: allow nil for blog post:
   validates_uniqueness_of :filename, :cloudinary_url
 
   #TODO: move this to album?
