@@ -1,39 +1,47 @@
 - # TODO: paginate
-.container
-  %script{:src => 'galleria.classic.js'}
-  .row
-    .center
-      .light-grey
-        %br
-          - if @posts.present?
+.container-fluid
+  .row-fluid.min-buffer
+    .span2.album-list
+      = render 'home/blog/sidebar'
+    .span10
+      %script{:src => 'galleria.classic.js'}
+      .row
+        .center
+          .light-grey
             %br
-            - @posts.each do |post|
-              .row
-                - if post.picture.present?
-                  .span7
-                    .row
-                      %h3= post.title
-                      %h4= post.created_at.strftime("%B %d, %Y")
-                    .row
-                      %br
-                      %h4{:style => "line-height:26px"}= post.body
-                  .span5
-                    .row
-                      = link_to cl_image_tag(post.picture.cloudinary_public_id, :width => 300, quality: 'jpegmini', sign_url: true, dpr: :auto, :title=>"#{post.picture.title}", :style => "padding:25px;"), picture_path(post.picture)
-                - else
-                  .span12
-                    .row
-                      %h3= post.title
-                    .row
-                      %h4= post.created_at.strftime("%B %d, %Y")
-                      %br
-                      %h4{:style => "line-height:26px"}= post.body
-              .row
+              - if @last_volume
                 %br
-                %hr
+                - @last_volume.posts.sort_by(&:created_at).reverse.each do |post|
+                  = p "herehere"
+                  = p @last_volume
+                  = p post
+                  = p post.picture
+                  .row
+                    - if post.picture.present?
+                      .span7
+                        .row
+                          %h3= post.title
+                          %h4= post.created_at.strftime("%B %d, %Y")
+                        .row
+                          %br
+                          %h4{:style => "line-height:26px"}= post.body
+                      .span5
+                        .row
+                          = link_to cl_image_tag(post.picture.cloudinary_public_id, :width => 300, quality: 'jpegmini', sign_url: true, dpr: :auto, :title=>"#{post.picture.title}", :style => "padding:25px;"), picture_path(post.picture)
+                    - else
+                      .span12
+                        .row
+                          %h3= post.title
+                        .row
+                          %h4= post.created_at.strftime("%B %d, %Y")
+                          %br
+                          %h4{:style => "line-height:26px"}= post.body
+                  .row
+                    %br
+                    %hr
 
-          - else # TODO: remove after first blog post
-            .row
-              %h1= "Coming soon!"
-              %br
-              %br
+              - else # TODO: remove after first blog post
+                .row
+                  %h1= "Coming soon!"
+                  %br
+                  %br

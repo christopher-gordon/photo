@@ -1,0 +1,9 @@
+%ul.nav.nav-list#filters{style: "margin-left:auto;margin-right:auto;"}
+  %li.nav-header
+    %h5{:style => 'font-weight:normal;text-shadow:none;'}
+      VOLUMES
+  - @volumes.each do |volume|
+    %li.album-list-item
+      -# %a{:href => "#", "data-filter" => ".#{volume.css_filter_name}"} #{volume.name.titleize}
+      = link_to(volume.name.titleize, blog_path(@volume), :params => "test")
+

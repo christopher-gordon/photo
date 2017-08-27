@@ -1,1 +1,1 @@
-rvm --create use ruby-1.9.3-p484@photo
+rvm --create use ruby-2.1.2@photo

@@ -9,7 +9,7 @@ class Picture < ActiveRecord::Base
   attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering, :cloudinary_url, :cloudinary_public_id
 
   validates_presence_of :title, :filename #, :album_id # TODO: allow nil for blog post:
-  validates_uniqueness_of :filename, :cloudinary_url
+  validates_uniqueness_of :filename #, :cloudinary_url # TODO: ensure nil can be saved initially, for blog post
 
   #TODO: move this to album?
   def self.generate_ordering(album)
@@ -30,6 +30,7 @@ class Picture < ActiveRecord::Base
   protected
 
   def self.create(params)
+    puts "ONCE"
     return false unless valid_params?(params)
 
     picture = Picture.new
@@ -44,11 +45,17 @@ class Picture < ActiveRecord::Base
     album = Album.find_by_name(params[:album])
     picture.album_id = album.id
     picture.ordering = generate_ordering album
+    # p picture.inspect
+    # p picture.valid?
+    # p picture.errors
+    p "$$$$$$$"
 
     #not needed after Cloudinary is used
     #upload(params[:photo_file])
 
     return false unless picture.save
+
+    puts "after first save"
 
     response = Cloudinary::Uploader.upload(params[:photo_file])
 

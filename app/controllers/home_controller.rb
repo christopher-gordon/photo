@@ -3,6 +3,8 @@ class HomeController < ApplicationController
 
   def blog
     @posts = Post.all.sort_by(&:created_at).reverse!
+    @volumes = Volume.all.select(&:has_posts?).sort_by(&:created_at)
+    @last_volume = @volumes.try(:last)
   end
 
   def framing
