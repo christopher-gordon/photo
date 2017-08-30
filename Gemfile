@@ -11,7 +11,7 @@ gem "mysql2", "0.3.17"
 gem 'haml'
 gem 'haml-rails'
 gem "sass", "3.2.7"
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', "3.1.1.0"
 gem 'simple_form'
 
 gem 'json'

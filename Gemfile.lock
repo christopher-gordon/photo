@@ -34,7 +34,7 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    bootstrap-sass (3.3.1.0)
+    bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
     builder (3.0.4)
     cloudinary (1.8.1)
@@ -182,7 +182,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (~> 1.1.0)
-  bootstrap-sass
+  bootstrap-sass (= 3.1.1.0)
   cloudinary
   coffee-rails (~> 3.2.1)
   haml
@@ -207,4 +207,4 @@ RUBY VERSION
    ruby 2.1.2p95
 
 BUNDLED WITH
-   1.13.6
+   1.15.4
