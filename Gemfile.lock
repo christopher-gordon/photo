@@ -46,7 +46,7 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
-    cloudinary (1.8.1)
+    cloudinary (1.0.70)
       aws_cf_signer
       rest-client
     coderay (1.1.1)
@@ -180,7 +180,7 @@ DEPENDENCIES
   better_errors (~> 1.1.0)
   bootstrap-sass
   carrierwave (= 0.9.0)
-  cloudinary
+  cloudinary (= 1.0.70)
   coffee-rails (~> 3.2.1)
   haml
   haml-rails

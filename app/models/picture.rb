@@ -9,7 +9,7 @@ class Picture < ActiveRecord::Base
   attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering, :cloudinary_url, :cloudinary_public_id
 
   validates_presence_of :title, :filename, :album_id
-  validates_uniqueness_of :filename, :cloudinary_url
+  validates_uniqueness_of :filename, :cloudinary_url, :allow_blank => true
 
   #TODO: move this to album?
   def self.generate_ordering(album)
@@ -48,6 +48,9 @@ class Picture < ActiveRecord::Base
     #not needed after Cloudinary is used
     #upload(params[:photo_file])
 
+    p "picture.rb:"
+    p picture.valid?
+    p picture.errors
     return false unless picture.save
 
     response = Cloudinary::Uploader.upload(params[:photo_file])

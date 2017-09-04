@@ -19,7 +19,7 @@ gem "rails-gallery"
 gem "rmagick", "2.13.2", :require => false
 
 gem "carrierwave", "0.9.0"
-gem "cloudinary"
+gem "cloudinary", "1.0.70"
 
 gem "sorcery", "0.8.5"
 gem "oauth", "0.4.4"
