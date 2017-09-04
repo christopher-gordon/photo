@@ -9,7 +9,7 @@ class Picture < ActiveRecord::Base
   attr_accessible :description, :title, :filename, :content_type, :slideshow, :album_id, :ordering, :cloudinary_url, :cloudinary_public_id
 
   validates_presence_of :title, :filename #, :album_id # TODO: allow nil for blog post:
-  validates_uniqueness_of :filename #, :cloudinary_url # TODO: ensure nil can be saved initially, for blog post
+  validates_uniqueness_of :filename, :cloudinary_url, :allow_blank => true # TODO: ensure nil can be saved initially, for blog post
 
   #TODO: move this to album?
   def self.generate_ordering(album)

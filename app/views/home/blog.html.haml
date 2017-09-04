@@ -12,10 +12,6 @@
               - if @last_volume
                 %br
                 - @last_volume.posts.sort_by(&:created_at).reverse.each do |post|
-                  = p "herehere"
-                  = p @last_volume
-                  = p post
-                  = p post.picture
                   .row
                     - if post.picture.present?
                       .span7
