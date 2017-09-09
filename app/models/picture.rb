@@ -38,7 +38,7 @@ class Picture < ActiveRecord::Base
     picture.description = params[:description]
     #picture.location = params[:location]
     picture.content_type = params[:photo_file].content_type
-    picture.filename = params[:photo_file].original_filename
+    picture.filename = SecureRandom.random_number(999).to_s + "-" + params[:photo_file].original_filename
     picture.slideshow = params[:slideshow] == "1"
 
     album = Album.find_by_name(params[:album])
