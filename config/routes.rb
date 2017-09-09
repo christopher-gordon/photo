@@ -11,7 +11,7 @@ Photo::Application.routes.draw do
   match "/gallery_reset" => "gallery#reset"
   resources :pictures, :except => [:index]
   resources :posts, :only => [:new, :create, :index, :destroy]
-  resources :volumes, :only => [:new, :create, :index, :destroy]
+  resources :volumes, :only => [:new, :create, :index, :destroy] # is this needed?
 
   #match "/contact" => "home#contact"
   match "/about" => "home#about"

@@ -30,7 +30,6 @@ class Picture < ActiveRecord::Base
   protected
 
   def self.create(params)
-    puts "ONCE"
     return false unless valid_params?(params)
 
     picture = Picture.new
@@ -44,6 +43,7 @@ class Picture < ActiveRecord::Base
 
     album = Album.find_by_name(params[:album])
     picture.album_id = album.id
+
     picture.ordering = generate_ordering album
     # p picture.inspect
     # p picture.valid?
@@ -54,8 +54,6 @@ class Picture < ActiveRecord::Base
     #upload(params[:photo_file])
 
     return false unless picture.save
-
-    puts "after first save"
 
     response = Cloudinary::Uploader.upload(params[:photo_file])
 

@@ -1,17 +1,18 @@
 - # TODO: paginate
 .container-fluid
   .row-fluid.min-buffer
-    .span2.album-list
+    .span2
       = render 'home/blog/sidebar'
     .span10
+      -# TODO: kill?
       %script{:src => 'galleria.classic.js'}
       .row
         .center
           .light-grey
             %br
-              - if @last_volume
+              - if @current_volume
                 %br
-                - @last_volume.posts.sort_by(&:created_at).reverse.each do |post|
+                - @current_volume.posts.sort_by(&:created_at).reverse.each do |post|
                   .row
                     - if post.picture.present?
                       .span7
