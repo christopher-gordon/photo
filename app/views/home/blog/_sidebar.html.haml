@@ -3,6 +3,10 @@
     %h5{:style => 'font-weight:normal;text-shadow:none;'}
       VOLUMES
   - @volumes.reverse.each do |volume|
-    %li.volume-list-item
-      = link_to(volume.name.titleize, blog_path(:volume => volume.id), :onClick => "window.location.href=\"#{blog_url(:volume => volume.id)}\";")
+    - if volume.id == @current_volume.id
+      %li.volume-list-item.active
+        = link_to(volume.name.titleize, blog_path(:volume => volume.id), :onClick => "window.location.href=\"#{blog_url(:volume => volume.id)}\";")
+    - else
+      %li.volume-list-item
+        = link_to(volume.name.titleize, blog_path(:volume => volume.id), :onClick => "window.location.href=\"#{blog_url(:volume => volume.id)}\";")
 
